@@ -28,8 +28,11 @@
 #include <google/protobuf/inlined_string_field.h>
 #include <google/protobuf/metadata.h>
 #include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_Tweet_2eproto
@@ -45,19 +48,1936 @@ struct TableStruct_Tweet_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[13]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Tweet_2eproto;
+namespace proto {
+class ErrorReturn;
+class ErrorReturnDefaultTypeInternal;
+extern ErrorReturnDefaultTypeInternal _ErrorReturn_default_instance_;
+class FollowIn;
+class FollowInDefaultTypeInternal;
+extern FollowInDefaultTypeInternal _FollowIn_default_instance_;
+class FollowOut;
+class FollowOutDefaultTypeInternal;
+extern FollowOutDefaultTypeInternal _FollowOut_default_instance_;
+class LoginIn;
+class LoginInDefaultTypeInternal;
+extern LoginInDefaultTypeInternal _LoginIn_default_instance_;
+class LoginOut;
+class LoginOutDefaultTypeInternal;
+extern LoginOutDefaultTypeInternal _LoginOut_default_instance_;
+class LogoutIn;
+class LogoutInDefaultTypeInternal;
+extern LogoutInDefaultTypeInternal _LogoutIn_default_instance_;
+class LogoutOut;
+class LogoutOutDefaultTypeInternal;
+extern LogoutOutDefaultTypeInternal _LogoutOut_default_instance_;
+class RegisterIn;
+class RegisterInDefaultTypeInternal;
+extern RegisterInDefaultTypeInternal _RegisterIn_default_instance_;
+class RegisterOut;
+class RegisterOutDefaultTypeInternal;
+extern RegisterOutDefaultTypeInternal _RegisterOut_default_instance_;
+class ShowIn;
+class ShowInDefaultTypeInternal;
+extern ShowInDefaultTypeInternal _ShowIn_default_instance_;
+class ShowOut;
+class ShowOutDefaultTypeInternal;
+extern ShowOutDefaultTypeInternal _ShowOut_default_instance_;
+class TweetIn;
+class TweetInDefaultTypeInternal;
+extern TweetInDefaultTypeInternal _TweetIn_default_instance_;
+class TweetOut;
+class TweetOutDefaultTypeInternal;
+extern TweetOutDefaultTypeInternal _TweetOut_default_instance_;
+}  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
+template<> ::proto::ErrorReturn* Arena::CreateMaybeMessage<::proto::ErrorReturn>(Arena*);
+template<> ::proto::FollowIn* Arena::CreateMaybeMessage<::proto::FollowIn>(Arena*);
+template<> ::proto::FollowOut* Arena::CreateMaybeMessage<::proto::FollowOut>(Arena*);
+template<> ::proto::LoginIn* Arena::CreateMaybeMessage<::proto::LoginIn>(Arena*);
+template<> ::proto::LoginOut* Arena::CreateMaybeMessage<::proto::LoginOut>(Arena*);
+template<> ::proto::LogoutIn* Arena::CreateMaybeMessage<::proto::LogoutIn>(Arena*);
+template<> ::proto::LogoutOut* Arena::CreateMaybeMessage<::proto::LogoutOut>(Arena*);
+template<> ::proto::RegisterIn* Arena::CreateMaybeMessage<::proto::RegisterIn>(Arena*);
+template<> ::proto::RegisterOut* Arena::CreateMaybeMessage<::proto::RegisterOut>(Arena*);
+template<> ::proto::ShowIn* Arena::CreateMaybeMessage<::proto::ShowIn>(Arena*);
+template<> ::proto::ShowOut* Arena::CreateMaybeMessage<::proto::ShowOut>(Arena*);
+template<> ::proto::TweetIn* Arena::CreateMaybeMessage<::proto::TweetIn>(Arena*);
+template<> ::proto::TweetOut* Arena::CreateMaybeMessage<::proto::TweetOut>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
+namespace proto {
 
+enum ErrorReturn_ReturnCodeEnum : int {
+  ErrorReturn_ReturnCodeEnum_ERROR = 0,
+  ErrorReturn_ReturnCodeEnum_SUCCESS = 1,
+  ErrorReturn_ReturnCodeEnum_LOGOUT = 2,
+  ErrorReturn_ReturnCodeEnum_ErrorReturn_ReturnCodeEnum_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ErrorReturn_ReturnCodeEnum_ErrorReturn_ReturnCodeEnum_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ErrorReturn_ReturnCodeEnum_IsValid(int value);
+constexpr ErrorReturn_ReturnCodeEnum ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MIN = ErrorReturn_ReturnCodeEnum_ERROR;
+constexpr ErrorReturn_ReturnCodeEnum ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MAX = ErrorReturn_ReturnCodeEnum_LOGOUT;
+constexpr int ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_ARRAYSIZE = ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ErrorReturn_ReturnCodeEnum_descriptor();
+template<typename T>
+inline const std::string& ErrorReturn_ReturnCodeEnum_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ErrorReturn_ReturnCodeEnum>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ErrorReturn_ReturnCodeEnum_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ErrorReturn_ReturnCodeEnum_descriptor(), enum_t_value);
+}
+inline bool ErrorReturn_ReturnCodeEnum_Parse(
+    const std::string& name, ErrorReturn_ReturnCodeEnum* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ErrorReturn_ReturnCodeEnum>(
+    ErrorReturn_ReturnCodeEnum_descriptor(), name, value);
+}
 // ===================================================================
 
+class ErrorReturn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.ErrorReturn) */ {
+ public:
+  ErrorReturn();
+  virtual ~ErrorReturn();
 
+  ErrorReturn(const ErrorReturn& from);
+  ErrorReturn(ErrorReturn&& from) noexcept
+    : ErrorReturn() {
+    *this = ::std::move(from);
+  }
+
+  inline ErrorReturn& operator=(const ErrorReturn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ErrorReturn& operator=(ErrorReturn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ErrorReturn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ErrorReturn* internal_default_instance() {
+    return reinterpret_cast<const ErrorReturn*>(
+               &_ErrorReturn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(ErrorReturn& a, ErrorReturn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ErrorReturn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ErrorReturn* New() const final {
+    return CreateMaybeMessage<ErrorReturn>(nullptr);
+  }
+
+  ErrorReturn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ErrorReturn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ErrorReturn& from);
+  void MergeFrom(const ErrorReturn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ErrorReturn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.ErrorReturn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef ErrorReturn_ReturnCodeEnum ReturnCodeEnum;
+  static constexpr ReturnCodeEnum ERROR =
+    ErrorReturn_ReturnCodeEnum_ERROR;
+  static constexpr ReturnCodeEnum SUCCESS =
+    ErrorReturn_ReturnCodeEnum_SUCCESS;
+  static constexpr ReturnCodeEnum LOGOUT =
+    ErrorReturn_ReturnCodeEnum_LOGOUT;
+  static inline bool ReturnCodeEnum_IsValid(int value) {
+    return ErrorReturn_ReturnCodeEnum_IsValid(value);
+  }
+  static constexpr ReturnCodeEnum ReturnCodeEnum_MIN =
+    ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MIN;
+  static constexpr ReturnCodeEnum ReturnCodeEnum_MAX =
+    ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MAX;
+  static constexpr int ReturnCodeEnum_ARRAYSIZE =
+    ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  ReturnCodeEnum_descriptor() {
+    return ErrorReturn_ReturnCodeEnum_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& ReturnCodeEnum_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, ReturnCodeEnum>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function ReturnCodeEnum_Name.");
+    return ErrorReturn_ReturnCodeEnum_Name(enum_t_value);
+  }
+  static inline bool ReturnCodeEnum_Parse(const std::string& name,
+      ReturnCodeEnum* value) {
+    return ErrorReturn_ReturnCodeEnum_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCodeFieldNumber = 1,
+  };
+  // .proto.ErrorReturn.ReturnCodeEnum code = 1;
+  void clear_code();
+  ::proto::ErrorReturn_ReturnCodeEnum code() const;
+  void set_code(::proto::ErrorReturn_ReturnCodeEnum value);
+  private:
+  ::proto::ErrorReturn_ReturnCodeEnum _internal_code() const;
+  void _internal_set_code(::proto::ErrorReturn_ReturnCodeEnum value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.ErrorReturn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  int code_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TweetIn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.TweetIn) */ {
+ public:
+  TweetIn();
+  virtual ~TweetIn();
+
+  TweetIn(const TweetIn& from);
+  TweetIn(TweetIn&& from) noexcept
+    : TweetIn() {
+    *this = ::std::move(from);
+  }
+
+  inline TweetIn& operator=(const TweetIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TweetIn& operator=(TweetIn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TweetIn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TweetIn* internal_default_instance() {
+    return reinterpret_cast<const TweetIn*>(
+               &_TweetIn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(TweetIn& a, TweetIn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TweetIn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TweetIn* New() const final {
+    return CreateMaybeMessage<TweetIn>(nullptr);
+  }
+
+  TweetIn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TweetIn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TweetIn& from);
+  void MergeFrom(const TweetIn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TweetIn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.TweetIn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserFieldNumber = 1,
+    kContentFieldNumber = 2,
+    kTimeFieldNumber = 3,
+  };
+  // string user = 1;
+  void clear_user();
+  const std::string& user() const;
+  void set_user(const std::string& value);
+  void set_user(std::string&& value);
+  void set_user(const char* value);
+  void set_user(const char* value, size_t size);
+  std::string* mutable_user();
+  std::string* release_user();
+  void set_allocated_user(std::string* user);
+  private:
+  const std::string& _internal_user() const;
+  void _internal_set_user(const std::string& value);
+  std::string* _internal_mutable_user();
+  public:
+
+  // string content = 2;
+  void clear_content();
+  const std::string& content() const;
+  void set_content(const std::string& value);
+  void set_content(std::string&& value);
+  void set_content(const char* value);
+  void set_content(const char* value, size_t size);
+  std::string* mutable_content();
+  std::string* release_content();
+  void set_allocated_content(std::string* content);
+  private:
+  const std::string& _internal_content() const;
+  void _internal_set_content(const std::string& value);
+  std::string* _internal_mutable_content();
+  public:
+
+  // int64 time = 3;
+  void clear_time();
+  ::PROTOBUF_NAMESPACE_ID::int64 time() const;
+  void set_time(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_time() const;
+  void _internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.TweetIn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr content_;
+  ::PROTOBUF_NAMESPACE_ID::int64 time_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TweetOut :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.TweetOut) */ {
+ public:
+  TweetOut();
+  virtual ~TweetOut();
+
+  TweetOut(const TweetOut& from);
+  TweetOut(TweetOut&& from) noexcept
+    : TweetOut() {
+    *this = ::std::move(from);
+  }
+
+  inline TweetOut& operator=(const TweetOut& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TweetOut& operator=(TweetOut&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TweetOut& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TweetOut* internal_default_instance() {
+    return reinterpret_cast<const TweetOut*>(
+               &_TweetOut_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(TweetOut& a, TweetOut& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TweetOut* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TweetOut* New() const final {
+    return CreateMaybeMessage<TweetOut>(nullptr);
+  }
+
+  TweetOut* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TweetOut>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TweetOut& from);
+  void MergeFrom(const TweetOut& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TweetOut* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.TweetOut";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrorFieldNumber = 1,
+  };
+  // .proto.ErrorReturn error = 1;
+  bool has_error() const;
+  private:
+  bool _internal_has_error() const;
+  public:
+  void clear_error();
+  const ::proto::ErrorReturn& error() const;
+  ::proto::ErrorReturn* release_error();
+  ::proto::ErrorReturn* mutable_error();
+  void set_allocated_error(::proto::ErrorReturn* error);
+  private:
+  const ::proto::ErrorReturn& _internal_error() const;
+  ::proto::ErrorReturn* _internal_mutable_error();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.TweetOut)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::proto::ErrorReturn* error_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class FollowIn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.FollowIn) */ {
+ public:
+  FollowIn();
+  virtual ~FollowIn();
+
+  FollowIn(const FollowIn& from);
+  FollowIn(FollowIn&& from) noexcept
+    : FollowIn() {
+    *this = ::std::move(from);
+  }
+
+  inline FollowIn& operator=(const FollowIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FollowIn& operator=(FollowIn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const FollowIn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const FollowIn* internal_default_instance() {
+    return reinterpret_cast<const FollowIn*>(
+               &_FollowIn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(FollowIn& a, FollowIn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FollowIn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline FollowIn* New() const final {
+    return CreateMaybeMessage<FollowIn>(nullptr);
+  }
+
+  FollowIn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<FollowIn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const FollowIn& from);
+  void MergeFrom(const FollowIn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(FollowIn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.FollowIn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+  };
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.FollowIn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class FollowOut :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.FollowOut) */ {
+ public:
+  FollowOut();
+  virtual ~FollowOut();
+
+  FollowOut(const FollowOut& from);
+  FollowOut(FollowOut&& from) noexcept
+    : FollowOut() {
+    *this = ::std::move(from);
+  }
+
+  inline FollowOut& operator=(const FollowOut& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FollowOut& operator=(FollowOut&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const FollowOut& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const FollowOut* internal_default_instance() {
+    return reinterpret_cast<const FollowOut*>(
+               &_FollowOut_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(FollowOut& a, FollowOut& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FollowOut* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline FollowOut* New() const final {
+    return CreateMaybeMessage<FollowOut>(nullptr);
+  }
+
+  FollowOut* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<FollowOut>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const FollowOut& from);
+  void MergeFrom(const FollowOut& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(FollowOut* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.FollowOut";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrorFieldNumber = 1,
+  };
+  // .proto.ErrorReturn error = 1;
+  bool has_error() const;
+  private:
+  bool _internal_has_error() const;
+  public:
+  void clear_error();
+  const ::proto::ErrorReturn& error() const;
+  ::proto::ErrorReturn* release_error();
+  ::proto::ErrorReturn* mutable_error();
+  void set_allocated_error(::proto::ErrorReturn* error);
+  private:
+  const ::proto::ErrorReturn& _internal_error() const;
+  ::proto::ErrorReturn* _internal_mutable_error();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.FollowOut)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::proto::ErrorReturn* error_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShowIn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.ShowIn) */ {
+ public:
+  ShowIn();
+  virtual ~ShowIn();
+
+  ShowIn(const ShowIn& from);
+  ShowIn(ShowIn&& from) noexcept
+    : ShowIn() {
+    *this = ::std::move(from);
+  }
+
+  inline ShowIn& operator=(const ShowIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShowIn& operator=(ShowIn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ShowIn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ShowIn* internal_default_instance() {
+    return reinterpret_cast<const ShowIn*>(
+               &_ShowIn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(ShowIn& a, ShowIn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShowIn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ShowIn* New() const final {
+    return CreateMaybeMessage<ShowIn>(nullptr);
+  }
+
+  ShowIn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ShowIn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ShowIn& from);
+  void MergeFrom(const ShowIn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShowIn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.ShowIn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserFieldNumber = 1,
+  };
+  // string user = 1;
+  void clear_user();
+  const std::string& user() const;
+  void set_user(const std::string& value);
+  void set_user(std::string&& value);
+  void set_user(const char* value);
+  void set_user(const char* value, size_t size);
+  std::string* mutable_user();
+  std::string* release_user();
+  void set_allocated_user(std::string* user);
+  private:
+  const std::string& _internal_user() const;
+  void _internal_set_user(const std::string& value);
+  std::string* _internal_mutable_user();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.ShowIn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ShowOut :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.ShowOut) */ {
+ public:
+  ShowOut();
+  virtual ~ShowOut();
+
+  ShowOut(const ShowOut& from);
+  ShowOut(ShowOut&& from) noexcept
+    : ShowOut() {
+    *this = ::std::move(from);
+  }
+
+  inline ShowOut& operator=(const ShowOut& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ShowOut& operator=(ShowOut&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ShowOut& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ShowOut* internal_default_instance() {
+    return reinterpret_cast<const ShowOut*>(
+               &_ShowOut_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(ShowOut& a, ShowOut& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ShowOut* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ShowOut* New() const final {
+    return CreateMaybeMessage<ShowOut>(nullptr);
+  }
+
+  ShowOut* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ShowOut>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ShowOut& from);
+  void MergeFrom(const ShowOut& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShowOut* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.ShowOut";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTweetsFieldNumber = 1,
+    kErrorFieldNumber = 2,
+  };
+  // repeated .proto.TweetIn tweets = 1;
+  int tweets_size() const;
+  private:
+  int _internal_tweets_size() const;
+  public:
+  void clear_tweets();
+  ::proto::TweetIn* mutable_tweets(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn >*
+      mutable_tweets();
+  private:
+  const ::proto::TweetIn& _internal_tweets(int index) const;
+  ::proto::TweetIn* _internal_add_tweets();
+  public:
+  const ::proto::TweetIn& tweets(int index) const;
+  ::proto::TweetIn* add_tweets();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn >&
+      tweets() const;
+
+  // .proto.ErrorReturn error = 2;
+  bool has_error() const;
+  private:
+  bool _internal_has_error() const;
+  public:
+  void clear_error();
+  const ::proto::ErrorReturn& error() const;
+  ::proto::ErrorReturn* release_error();
+  ::proto::ErrorReturn* mutable_error();
+  void set_allocated_error(::proto::ErrorReturn* error);
+  private:
+  const ::proto::ErrorReturn& _internal_error() const;
+  ::proto::ErrorReturn* _internal_mutable_error();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.ShowOut)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn > tweets_;
+  ::proto::ErrorReturn* error_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LoginIn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.LoginIn) */ {
+ public:
+  LoginIn();
+  virtual ~LoginIn();
+
+  LoginIn(const LoginIn& from);
+  LoginIn(LoginIn&& from) noexcept
+    : LoginIn() {
+    *this = ::std::move(from);
+  }
+
+  inline LoginIn& operator=(const LoginIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LoginIn& operator=(LoginIn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const LoginIn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const LoginIn* internal_default_instance() {
+    return reinterpret_cast<const LoginIn*>(
+               &_LoginIn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(LoginIn& a, LoginIn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LoginIn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline LoginIn* New() const final {
+    return CreateMaybeMessage<LoginIn>(nullptr);
+  }
+
+  LoginIn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LoginIn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const LoginIn& from);
+  void MergeFrom(const LoginIn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LoginIn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.LoginIn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUserFieldNumber = 1,
+    kPassFieldNumber = 2,
+  };
+  // string user = 1;
+  void clear_user();
+  const std::string& user() const;
+  void set_user(const std::string& value);
+  void set_user(std::string&& value);
+  void set_user(const char* value);
+  void set_user(const char* value, size_t size);
+  std::string* mutable_user();
+  std::string* release_user();
+  void set_allocated_user(std::string* user);
+  private:
+  const std::string& _internal_user() const;
+  void _internal_set_user(const std::string& value);
+  std::string* _internal_mutable_user();
+  public:
+
+  // string pass = 2;
+  void clear_pass();
+  const std::string& pass() const;
+  void set_pass(const std::string& value);
+  void set_pass(std::string&& value);
+  void set_pass(const char* value);
+  void set_pass(const char* value, size_t size);
+  std::string* mutable_pass();
+  std::string* release_pass();
+  void set_allocated_pass(std::string* pass);
+  private:
+  const std::string& _internal_pass() const;
+  void _internal_set_pass(const std::string& value);
+  std::string* _internal_mutable_pass();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.LoginIn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pass_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LoginOut :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.LoginOut) */ {
+ public:
+  LoginOut();
+  virtual ~LoginOut();
+
+  LoginOut(const LoginOut& from);
+  LoginOut(LoginOut&& from) noexcept
+    : LoginOut() {
+    *this = ::std::move(from);
+  }
+
+  inline LoginOut& operator=(const LoginOut& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LoginOut& operator=(LoginOut&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const LoginOut& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const LoginOut* internal_default_instance() {
+    return reinterpret_cast<const LoginOut*>(
+               &_LoginOut_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(LoginOut& a, LoginOut& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LoginOut* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline LoginOut* New() const final {
+    return CreateMaybeMessage<LoginOut>(nullptr);
+  }
+
+  LoginOut* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LoginOut>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const LoginOut& from);
+  void MergeFrom(const LoginOut& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LoginOut* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.LoginOut";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrorFieldNumber = 1,
+  };
+  // .proto.ErrorReturn error = 1;
+  bool has_error() const;
+  private:
+  bool _internal_has_error() const;
+  public:
+  void clear_error();
+  const ::proto::ErrorReturn& error() const;
+  ::proto::ErrorReturn* release_error();
+  ::proto::ErrorReturn* mutable_error();
+  void set_allocated_error(::proto::ErrorReturn* error);
+  private:
+  const ::proto::ErrorReturn& _internal_error() const;
+  ::proto::ErrorReturn* _internal_mutable_error();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.LoginOut)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::proto::ErrorReturn* error_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LogoutIn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.LogoutIn) */ {
+ public:
+  LogoutIn();
+  virtual ~LogoutIn();
+
+  LogoutIn(const LogoutIn& from);
+  LogoutIn(LogoutIn&& from) noexcept
+    : LogoutIn() {
+    *this = ::std::move(from);
+  }
+
+  inline LogoutIn& operator=(const LogoutIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LogoutIn& operator=(LogoutIn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const LogoutIn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const LogoutIn* internal_default_instance() {
+    return reinterpret_cast<const LogoutIn*>(
+               &_LogoutIn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(LogoutIn& a, LogoutIn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LogoutIn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline LogoutIn* New() const final {
+    return CreateMaybeMessage<LogoutIn>(nullptr);
+  }
+
+  LogoutIn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LogoutIn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const LogoutIn& from);
+  void MergeFrom(const LogoutIn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LogoutIn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.LogoutIn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:proto.LogoutIn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LogoutOut :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.LogoutOut) */ {
+ public:
+  LogoutOut();
+  virtual ~LogoutOut();
+
+  LogoutOut(const LogoutOut& from);
+  LogoutOut(LogoutOut&& from) noexcept
+    : LogoutOut() {
+    *this = ::std::move(from);
+  }
+
+  inline LogoutOut& operator=(const LogoutOut& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LogoutOut& operator=(LogoutOut&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const LogoutOut& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const LogoutOut* internal_default_instance() {
+    return reinterpret_cast<const LogoutOut*>(
+               &_LogoutOut_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  friend void swap(LogoutOut& a, LogoutOut& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LogoutOut* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline LogoutOut* New() const final {
+    return CreateMaybeMessage<LogoutOut>(nullptr);
+  }
+
+  LogoutOut* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LogoutOut>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const LogoutOut& from);
+  void MergeFrom(const LogoutOut& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LogoutOut* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.LogoutOut";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrorFieldNumber = 1,
+  };
+  // .proto.ErrorReturn error = 1;
+  bool has_error() const;
+  private:
+  bool _internal_has_error() const;
+  public:
+  void clear_error();
+  const ::proto::ErrorReturn& error() const;
+  ::proto::ErrorReturn* release_error();
+  ::proto::ErrorReturn* mutable_error();
+  void set_allocated_error(::proto::ErrorReturn* error);
+  private:
+  const ::proto::ErrorReturn& _internal_error() const;
+  ::proto::ErrorReturn* _internal_mutable_error();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.LogoutOut)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::proto::ErrorReturn* error_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RegisterIn :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.RegisterIn) */ {
+ public:
+  RegisterIn();
+  virtual ~RegisterIn();
+
+  RegisterIn(const RegisterIn& from);
+  RegisterIn(RegisterIn&& from) noexcept
+    : RegisterIn() {
+    *this = ::std::move(from);
+  }
+
+  inline RegisterIn& operator=(const RegisterIn& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterIn& operator=(RegisterIn&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const RegisterIn& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegisterIn* internal_default_instance() {
+    return reinterpret_cast<const RegisterIn*>(
+               &_RegisterIn_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  friend void swap(RegisterIn& a, RegisterIn& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RegisterIn* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RegisterIn* New() const final {
+    return CreateMaybeMessage<RegisterIn>(nullptr);
+  }
+
+  RegisterIn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RegisterIn>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const RegisterIn& from);
+  void MergeFrom(const RegisterIn& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RegisterIn* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.RegisterIn";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+    kPassFieldNumber = 2,
+  };
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // string pass = 2;
+  void clear_pass();
+  const std::string& pass() const;
+  void set_pass(const std::string& value);
+  void set_pass(std::string&& value);
+  void set_pass(const char* value);
+  void set_pass(const char* value, size_t size);
+  std::string* mutable_pass();
+  std::string* release_pass();
+  void set_allocated_pass(std::string* pass);
+  private:
+  const std::string& _internal_pass() const;
+  void _internal_set_pass(const std::string& value);
+  std::string* _internal_mutable_pass();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.RegisterIn)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pass_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RegisterOut :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.RegisterOut) */ {
+ public:
+  RegisterOut();
+  virtual ~RegisterOut();
+
+  RegisterOut(const RegisterOut& from);
+  RegisterOut(RegisterOut&& from) noexcept
+    : RegisterOut() {
+    *this = ::std::move(from);
+  }
+
+  inline RegisterOut& operator=(const RegisterOut& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RegisterOut& operator=(RegisterOut&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const RegisterOut& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegisterOut* internal_default_instance() {
+    return reinterpret_cast<const RegisterOut*>(
+               &_RegisterOut_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(RegisterOut& a, RegisterOut& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RegisterOut* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RegisterOut* New() const final {
+    return CreateMaybeMessage<RegisterOut>(nullptr);
+  }
+
+  RegisterOut* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RegisterOut>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const RegisterOut& from);
+  void MergeFrom(const RegisterOut& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RegisterOut* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.RegisterOut";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
+    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrorFieldNumber = 1,
+  };
+  // .proto.ErrorReturn error = 1;
+  bool has_error() const;
+  private:
+  bool _internal_has_error() const;
+  public:
+  void clear_error();
+  const ::proto::ErrorReturn& error() const;
+  ::proto::ErrorReturn* release_error();
+  ::proto::ErrorReturn* mutable_error();
+  void set_allocated_error(::proto::ErrorReturn* error);
+  private:
+  const ::proto::ErrorReturn& _internal_error() const;
+  ::proto::ErrorReturn* _internal_mutable_error();
+  public:
+
+  // @@protoc_insertion_point(class_scope:proto.RegisterOut)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::proto::ErrorReturn* error_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Tweet_2eproto;
+};
 // ===================================================================
 
 
@@ -67,12 +1987,1016 @@ PROTOBUF_NAMESPACE_CLOSE
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// ErrorReturn
+
+// .proto.ErrorReturn.ReturnCodeEnum code = 1;
+inline void ErrorReturn::clear_code() {
+  code_ = 0;
+}
+inline ::proto::ErrorReturn_ReturnCodeEnum ErrorReturn::_internal_code() const {
+  return static_cast< ::proto::ErrorReturn_ReturnCodeEnum >(code_);
+}
+inline ::proto::ErrorReturn_ReturnCodeEnum ErrorReturn::code() const {
+  // @@protoc_insertion_point(field_get:proto.ErrorReturn.code)
+  return _internal_code();
+}
+inline void ErrorReturn::_internal_set_code(::proto::ErrorReturn_ReturnCodeEnum value) {
+  
+  code_ = value;
+}
+inline void ErrorReturn::set_code(::proto::ErrorReturn_ReturnCodeEnum value) {
+  _internal_set_code(value);
+  // @@protoc_insertion_point(field_set:proto.ErrorReturn.code)
+}
+
+// -------------------------------------------------------------------
+
+// TweetIn
+
+// string user = 1;
+inline void TweetIn::clear_user() {
+  user_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TweetIn::user() const {
+  // @@protoc_insertion_point(field_get:proto.TweetIn.user)
+  return _internal_user();
+}
+inline void TweetIn::set_user(const std::string& value) {
+  _internal_set_user(value);
+  // @@protoc_insertion_point(field_set:proto.TweetIn.user)
+}
+inline std::string* TweetIn::mutable_user() {
+  // @@protoc_insertion_point(field_mutable:proto.TweetIn.user)
+  return _internal_mutable_user();
+}
+inline const std::string& TweetIn::_internal_user() const {
+  return user_.GetNoArena();
+}
+inline void TweetIn::_internal_set_user(const std::string& value) {
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void TweetIn::set_user(std::string&& value) {
+  
+  user_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.TweetIn.user)
+}
+inline void TweetIn::set_user(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.TweetIn.user)
+}
+inline void TweetIn::set_user(const char* value, size_t size) {
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.TweetIn.user)
+}
+inline std::string* TweetIn::_internal_mutable_user() {
+  
+  return user_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TweetIn::release_user() {
+  // @@protoc_insertion_point(field_release:proto.TweetIn.user)
+  
+  return user_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TweetIn::set_allocated_user(std::string* user) {
+  if (user != nullptr) {
+    
+  } else {
+    
+  }
+  user_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user);
+  // @@protoc_insertion_point(field_set_allocated:proto.TweetIn.user)
+}
+
+// string content = 2;
+inline void TweetIn::clear_content() {
+  content_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TweetIn::content() const {
+  // @@protoc_insertion_point(field_get:proto.TweetIn.content)
+  return _internal_content();
+}
+inline void TweetIn::set_content(const std::string& value) {
+  _internal_set_content(value);
+  // @@protoc_insertion_point(field_set:proto.TweetIn.content)
+}
+inline std::string* TweetIn::mutable_content() {
+  // @@protoc_insertion_point(field_mutable:proto.TweetIn.content)
+  return _internal_mutable_content();
+}
+inline const std::string& TweetIn::_internal_content() const {
+  return content_.GetNoArena();
+}
+inline void TweetIn::_internal_set_content(const std::string& value) {
+  
+  content_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void TweetIn::set_content(std::string&& value) {
+  
+  content_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.TweetIn.content)
+}
+inline void TweetIn::set_content(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  content_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.TweetIn.content)
+}
+inline void TweetIn::set_content(const char* value, size_t size) {
+  
+  content_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.TweetIn.content)
+}
+inline std::string* TweetIn::_internal_mutable_content() {
+  
+  return content_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TweetIn::release_content() {
+  // @@protoc_insertion_point(field_release:proto.TweetIn.content)
+  
+  return content_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TweetIn::set_allocated_content(std::string* content) {
+  if (content != nullptr) {
+    
+  } else {
+    
+  }
+  content_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), content);
+  // @@protoc_insertion_point(field_set_allocated:proto.TweetIn.content)
+}
+
+// int64 time = 3;
+inline void TweetIn::clear_time() {
+  time_ = PROTOBUF_LONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 TweetIn::_internal_time() const {
+  return time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 TweetIn::time() const {
+  // @@protoc_insertion_point(field_get:proto.TweetIn.time)
+  return _internal_time();
+}
+inline void TweetIn::_internal_set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  
+  time_ = value;
+}
+inline void TweetIn::set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_time(value);
+  // @@protoc_insertion_point(field_set:proto.TweetIn.time)
+}
+
+// -------------------------------------------------------------------
+
+// TweetOut
+
+// .proto.ErrorReturn error = 1;
+inline bool TweetOut::_internal_has_error() const {
+  return this != internal_default_instance() && error_ != nullptr;
+}
+inline bool TweetOut::has_error() const {
+  return _internal_has_error();
+}
+inline void TweetOut::clear_error() {
+  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
+    delete error_;
+  }
+  error_ = nullptr;
+}
+inline const ::proto::ErrorReturn& TweetOut::_internal_error() const {
+  const ::proto::ErrorReturn* p = error_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
+      &::proto::_ErrorReturn_default_instance_);
+}
+inline const ::proto::ErrorReturn& TweetOut::error() const {
+  // @@protoc_insertion_point(field_get:proto.TweetOut.error)
+  return _internal_error();
+}
+inline ::proto::ErrorReturn* TweetOut::release_error() {
+  // @@protoc_insertion_point(field_release:proto.TweetOut.error)
+  
+  ::proto::ErrorReturn* temp = error_;
+  error_ = nullptr;
+  return temp;
+}
+inline ::proto::ErrorReturn* TweetOut::_internal_mutable_error() {
+  
+  if (error_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
+    error_ = p;
+  }
+  return error_;
+}
+inline ::proto::ErrorReturn* TweetOut::mutable_error() {
+  // @@protoc_insertion_point(field_mutable:proto.TweetOut.error)
+  return _internal_mutable_error();
+}
+inline void TweetOut::set_allocated_error(::proto::ErrorReturn* error) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete error_;
+  }
+  if (error) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:proto.TweetOut.error)
+}
+
+// -------------------------------------------------------------------
+
+// FollowIn
+
+// string name = 1;
+inline void FollowIn::clear_name() {
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& FollowIn::name() const {
+  // @@protoc_insertion_point(field_get:proto.FollowIn.name)
+  return _internal_name();
+}
+inline void FollowIn::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:proto.FollowIn.name)
+}
+inline std::string* FollowIn::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:proto.FollowIn.name)
+  return _internal_mutable_name();
+}
+inline const std::string& FollowIn::_internal_name() const {
+  return name_.GetNoArena();
+}
+inline void FollowIn::_internal_set_name(const std::string& value) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void FollowIn::set_name(std::string&& value) {
+  
+  name_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.FollowIn.name)
+}
+inline void FollowIn::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.FollowIn.name)
+}
+inline void FollowIn::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.FollowIn.name)
+}
+inline std::string* FollowIn::_internal_mutable_name() {
+  
+  return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* FollowIn::release_name() {
+  // @@protoc_insertion_point(field_release:proto.FollowIn.name)
+  
+  return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void FollowIn::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:proto.FollowIn.name)
+}
+
+// -------------------------------------------------------------------
+
+// FollowOut
+
+// .proto.ErrorReturn error = 1;
+inline bool FollowOut::_internal_has_error() const {
+  return this != internal_default_instance() && error_ != nullptr;
+}
+inline bool FollowOut::has_error() const {
+  return _internal_has_error();
+}
+inline void FollowOut::clear_error() {
+  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
+    delete error_;
+  }
+  error_ = nullptr;
+}
+inline const ::proto::ErrorReturn& FollowOut::_internal_error() const {
+  const ::proto::ErrorReturn* p = error_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
+      &::proto::_ErrorReturn_default_instance_);
+}
+inline const ::proto::ErrorReturn& FollowOut::error() const {
+  // @@protoc_insertion_point(field_get:proto.FollowOut.error)
+  return _internal_error();
+}
+inline ::proto::ErrorReturn* FollowOut::release_error() {
+  // @@protoc_insertion_point(field_release:proto.FollowOut.error)
+  
+  ::proto::ErrorReturn* temp = error_;
+  error_ = nullptr;
+  return temp;
+}
+inline ::proto::ErrorReturn* FollowOut::_internal_mutable_error() {
+  
+  if (error_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
+    error_ = p;
+  }
+  return error_;
+}
+inline ::proto::ErrorReturn* FollowOut::mutable_error() {
+  // @@protoc_insertion_point(field_mutable:proto.FollowOut.error)
+  return _internal_mutable_error();
+}
+inline void FollowOut::set_allocated_error(::proto::ErrorReturn* error) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete error_;
+  }
+  if (error) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:proto.FollowOut.error)
+}
+
+// -------------------------------------------------------------------
+
+// ShowIn
+
+// string user = 1;
+inline void ShowIn::clear_user() {
+  user_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& ShowIn::user() const {
+  // @@protoc_insertion_point(field_get:proto.ShowIn.user)
+  return _internal_user();
+}
+inline void ShowIn::set_user(const std::string& value) {
+  _internal_set_user(value);
+  // @@protoc_insertion_point(field_set:proto.ShowIn.user)
+}
+inline std::string* ShowIn::mutable_user() {
+  // @@protoc_insertion_point(field_mutable:proto.ShowIn.user)
+  return _internal_mutable_user();
+}
+inline const std::string& ShowIn::_internal_user() const {
+  return user_.GetNoArena();
+}
+inline void ShowIn::_internal_set_user(const std::string& value) {
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void ShowIn::set_user(std::string&& value) {
+  
+  user_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.ShowIn.user)
+}
+inline void ShowIn::set_user(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.ShowIn.user)
+}
+inline void ShowIn::set_user(const char* value, size_t size) {
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.ShowIn.user)
+}
+inline std::string* ShowIn::_internal_mutable_user() {
+  
+  return user_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* ShowIn::release_user() {
+  // @@protoc_insertion_point(field_release:proto.ShowIn.user)
+  
+  return user_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void ShowIn::set_allocated_user(std::string* user) {
+  if (user != nullptr) {
+    
+  } else {
+    
+  }
+  user_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user);
+  // @@protoc_insertion_point(field_set_allocated:proto.ShowIn.user)
+}
+
+// -------------------------------------------------------------------
+
+// ShowOut
+
+// repeated .proto.TweetIn tweets = 1;
+inline int ShowOut::_internal_tweets_size() const {
+  return tweets_.size();
+}
+inline int ShowOut::tweets_size() const {
+  return _internal_tweets_size();
+}
+inline void ShowOut::clear_tweets() {
+  tweets_.Clear();
+}
+inline ::proto::TweetIn* ShowOut::mutable_tweets(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.ShowOut.tweets)
+  return tweets_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn >*
+ShowOut::mutable_tweets() {
+  // @@protoc_insertion_point(field_mutable_list:proto.ShowOut.tweets)
+  return &tweets_;
+}
+inline const ::proto::TweetIn& ShowOut::_internal_tweets(int index) const {
+  return tweets_.Get(index);
+}
+inline const ::proto::TweetIn& ShowOut::tweets(int index) const {
+  // @@protoc_insertion_point(field_get:proto.ShowOut.tweets)
+  return _internal_tweets(index);
+}
+inline ::proto::TweetIn* ShowOut::_internal_add_tweets() {
+  return tweets_.Add();
+}
+inline ::proto::TweetIn* ShowOut::add_tweets() {
+  // @@protoc_insertion_point(field_add:proto.ShowOut.tweets)
+  return _internal_add_tweets();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn >&
+ShowOut::tweets() const {
+  // @@protoc_insertion_point(field_list:proto.ShowOut.tweets)
+  return tweets_;
+}
+
+// .proto.ErrorReturn error = 2;
+inline bool ShowOut::_internal_has_error() const {
+  return this != internal_default_instance() && error_ != nullptr;
+}
+inline bool ShowOut::has_error() const {
+  return _internal_has_error();
+}
+inline void ShowOut::clear_error() {
+  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
+    delete error_;
+  }
+  error_ = nullptr;
+}
+inline const ::proto::ErrorReturn& ShowOut::_internal_error() const {
+  const ::proto::ErrorReturn* p = error_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
+      &::proto::_ErrorReturn_default_instance_);
+}
+inline const ::proto::ErrorReturn& ShowOut::error() const {
+  // @@protoc_insertion_point(field_get:proto.ShowOut.error)
+  return _internal_error();
+}
+inline ::proto::ErrorReturn* ShowOut::release_error() {
+  // @@protoc_insertion_point(field_release:proto.ShowOut.error)
+  
+  ::proto::ErrorReturn* temp = error_;
+  error_ = nullptr;
+  return temp;
+}
+inline ::proto::ErrorReturn* ShowOut::_internal_mutable_error() {
+  
+  if (error_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
+    error_ = p;
+  }
+  return error_;
+}
+inline ::proto::ErrorReturn* ShowOut::mutable_error() {
+  // @@protoc_insertion_point(field_mutable:proto.ShowOut.error)
+  return _internal_mutable_error();
+}
+inline void ShowOut::set_allocated_error(::proto::ErrorReturn* error) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete error_;
+  }
+  if (error) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:proto.ShowOut.error)
+}
+
+// -------------------------------------------------------------------
+
+// LoginIn
+
+// string user = 1;
+inline void LoginIn::clear_user() {
+  user_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& LoginIn::user() const {
+  // @@protoc_insertion_point(field_get:proto.LoginIn.user)
+  return _internal_user();
+}
+inline void LoginIn::set_user(const std::string& value) {
+  _internal_set_user(value);
+  // @@protoc_insertion_point(field_set:proto.LoginIn.user)
+}
+inline std::string* LoginIn::mutable_user() {
+  // @@protoc_insertion_point(field_mutable:proto.LoginIn.user)
+  return _internal_mutable_user();
+}
+inline const std::string& LoginIn::_internal_user() const {
+  return user_.GetNoArena();
+}
+inline void LoginIn::_internal_set_user(const std::string& value) {
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void LoginIn::set_user(std::string&& value) {
+  
+  user_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.LoginIn.user)
+}
+inline void LoginIn::set_user(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.LoginIn.user)
+}
+inline void LoginIn::set_user(const char* value, size_t size) {
+  
+  user_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.LoginIn.user)
+}
+inline std::string* LoginIn::_internal_mutable_user() {
+  
+  return user_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* LoginIn::release_user() {
+  // @@protoc_insertion_point(field_release:proto.LoginIn.user)
+  
+  return user_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void LoginIn::set_allocated_user(std::string* user) {
+  if (user != nullptr) {
+    
+  } else {
+    
+  }
+  user_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user);
+  // @@protoc_insertion_point(field_set_allocated:proto.LoginIn.user)
+}
+
+// string pass = 2;
+inline void LoginIn::clear_pass() {
+  pass_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& LoginIn::pass() const {
+  // @@protoc_insertion_point(field_get:proto.LoginIn.pass)
+  return _internal_pass();
+}
+inline void LoginIn::set_pass(const std::string& value) {
+  _internal_set_pass(value);
+  // @@protoc_insertion_point(field_set:proto.LoginIn.pass)
+}
+inline std::string* LoginIn::mutable_pass() {
+  // @@protoc_insertion_point(field_mutable:proto.LoginIn.pass)
+  return _internal_mutable_pass();
+}
+inline const std::string& LoginIn::_internal_pass() const {
+  return pass_.GetNoArena();
+}
+inline void LoginIn::_internal_set_pass(const std::string& value) {
+  
+  pass_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void LoginIn::set_pass(std::string&& value) {
+  
+  pass_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.LoginIn.pass)
+}
+inline void LoginIn::set_pass(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  pass_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.LoginIn.pass)
+}
+inline void LoginIn::set_pass(const char* value, size_t size) {
+  
+  pass_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.LoginIn.pass)
+}
+inline std::string* LoginIn::_internal_mutable_pass() {
+  
+  return pass_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* LoginIn::release_pass() {
+  // @@protoc_insertion_point(field_release:proto.LoginIn.pass)
+  
+  return pass_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void LoginIn::set_allocated_pass(std::string* pass) {
+  if (pass != nullptr) {
+    
+  } else {
+    
+  }
+  pass_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), pass);
+  // @@protoc_insertion_point(field_set_allocated:proto.LoginIn.pass)
+}
+
+// -------------------------------------------------------------------
+
+// LoginOut
+
+// .proto.ErrorReturn error = 1;
+inline bool LoginOut::_internal_has_error() const {
+  return this != internal_default_instance() && error_ != nullptr;
+}
+inline bool LoginOut::has_error() const {
+  return _internal_has_error();
+}
+inline void LoginOut::clear_error() {
+  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
+    delete error_;
+  }
+  error_ = nullptr;
+}
+inline const ::proto::ErrorReturn& LoginOut::_internal_error() const {
+  const ::proto::ErrorReturn* p = error_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
+      &::proto::_ErrorReturn_default_instance_);
+}
+inline const ::proto::ErrorReturn& LoginOut::error() const {
+  // @@protoc_insertion_point(field_get:proto.LoginOut.error)
+  return _internal_error();
+}
+inline ::proto::ErrorReturn* LoginOut::release_error() {
+  // @@protoc_insertion_point(field_release:proto.LoginOut.error)
+  
+  ::proto::ErrorReturn* temp = error_;
+  error_ = nullptr;
+  return temp;
+}
+inline ::proto::ErrorReturn* LoginOut::_internal_mutable_error() {
+  
+  if (error_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
+    error_ = p;
+  }
+  return error_;
+}
+inline ::proto::ErrorReturn* LoginOut::mutable_error() {
+  // @@protoc_insertion_point(field_mutable:proto.LoginOut.error)
+  return _internal_mutable_error();
+}
+inline void LoginOut::set_allocated_error(::proto::ErrorReturn* error) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete error_;
+  }
+  if (error) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:proto.LoginOut.error)
+}
+
+// -------------------------------------------------------------------
+
+// LogoutIn
+
+// -------------------------------------------------------------------
+
+// LogoutOut
+
+// .proto.ErrorReturn error = 1;
+inline bool LogoutOut::_internal_has_error() const {
+  return this != internal_default_instance() && error_ != nullptr;
+}
+inline bool LogoutOut::has_error() const {
+  return _internal_has_error();
+}
+inline void LogoutOut::clear_error() {
+  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
+    delete error_;
+  }
+  error_ = nullptr;
+}
+inline const ::proto::ErrorReturn& LogoutOut::_internal_error() const {
+  const ::proto::ErrorReturn* p = error_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
+      &::proto::_ErrorReturn_default_instance_);
+}
+inline const ::proto::ErrorReturn& LogoutOut::error() const {
+  // @@protoc_insertion_point(field_get:proto.LogoutOut.error)
+  return _internal_error();
+}
+inline ::proto::ErrorReturn* LogoutOut::release_error() {
+  // @@protoc_insertion_point(field_release:proto.LogoutOut.error)
+  
+  ::proto::ErrorReturn* temp = error_;
+  error_ = nullptr;
+  return temp;
+}
+inline ::proto::ErrorReturn* LogoutOut::_internal_mutable_error() {
+  
+  if (error_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
+    error_ = p;
+  }
+  return error_;
+}
+inline ::proto::ErrorReturn* LogoutOut::mutable_error() {
+  // @@protoc_insertion_point(field_mutable:proto.LogoutOut.error)
+  return _internal_mutable_error();
+}
+inline void LogoutOut::set_allocated_error(::proto::ErrorReturn* error) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete error_;
+  }
+  if (error) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:proto.LogoutOut.error)
+}
+
+// -------------------------------------------------------------------
+
+// RegisterIn
+
+// string name = 1;
+inline void RegisterIn::clear_name() {
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& RegisterIn::name() const {
+  // @@protoc_insertion_point(field_get:proto.RegisterIn.name)
+  return _internal_name();
+}
+inline void RegisterIn::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:proto.RegisterIn.name)
+}
+inline std::string* RegisterIn::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:proto.RegisterIn.name)
+  return _internal_mutable_name();
+}
+inline const std::string& RegisterIn::_internal_name() const {
+  return name_.GetNoArena();
+}
+inline void RegisterIn::_internal_set_name(const std::string& value) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void RegisterIn::set_name(std::string&& value) {
+  
+  name_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.RegisterIn.name)
+}
+inline void RegisterIn::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.RegisterIn.name)
+}
+inline void RegisterIn::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.RegisterIn.name)
+}
+inline std::string* RegisterIn::_internal_mutable_name() {
+  
+  return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* RegisterIn::release_name() {
+  // @@protoc_insertion_point(field_release:proto.RegisterIn.name)
+  
+  return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void RegisterIn::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:proto.RegisterIn.name)
+}
+
+// string pass = 2;
+inline void RegisterIn::clear_pass() {
+  pass_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& RegisterIn::pass() const {
+  // @@protoc_insertion_point(field_get:proto.RegisterIn.pass)
+  return _internal_pass();
+}
+inline void RegisterIn::set_pass(const std::string& value) {
+  _internal_set_pass(value);
+  // @@protoc_insertion_point(field_set:proto.RegisterIn.pass)
+}
+inline std::string* RegisterIn::mutable_pass() {
+  // @@protoc_insertion_point(field_mutable:proto.RegisterIn.pass)
+  return _internal_mutable_pass();
+}
+inline const std::string& RegisterIn::_internal_pass() const {
+  return pass_.GetNoArena();
+}
+inline void RegisterIn::_internal_set_pass(const std::string& value) {
+  
+  pass_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void RegisterIn::set_pass(std::string&& value) {
+  
+  pass_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.RegisterIn.pass)
+}
+inline void RegisterIn::set_pass(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  pass_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.RegisterIn.pass)
+}
+inline void RegisterIn::set_pass(const char* value, size_t size) {
+  
+  pass_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.RegisterIn.pass)
+}
+inline std::string* RegisterIn::_internal_mutable_pass() {
+  
+  return pass_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* RegisterIn::release_pass() {
+  // @@protoc_insertion_point(field_release:proto.RegisterIn.pass)
+  
+  return pass_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void RegisterIn::set_allocated_pass(std::string* pass) {
+  if (pass != nullptr) {
+    
+  } else {
+    
+  }
+  pass_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), pass);
+  // @@protoc_insertion_point(field_set_allocated:proto.RegisterIn.pass)
+}
+
+// -------------------------------------------------------------------
+
+// RegisterOut
+
+// .proto.ErrorReturn error = 1;
+inline bool RegisterOut::_internal_has_error() const {
+  return this != internal_default_instance() && error_ != nullptr;
+}
+inline bool RegisterOut::has_error() const {
+  return _internal_has_error();
+}
+inline void RegisterOut::clear_error() {
+  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
+    delete error_;
+  }
+  error_ = nullptr;
+}
+inline const ::proto::ErrorReturn& RegisterOut::_internal_error() const {
+  const ::proto::ErrorReturn* p = error_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
+      &::proto::_ErrorReturn_default_instance_);
+}
+inline const ::proto::ErrorReturn& RegisterOut::error() const {
+  // @@protoc_insertion_point(field_get:proto.RegisterOut.error)
+  return _internal_error();
+}
+inline ::proto::ErrorReturn* RegisterOut::release_error() {
+  // @@protoc_insertion_point(field_release:proto.RegisterOut.error)
+  
+  ::proto::ErrorReturn* temp = error_;
+  error_ = nullptr;
+  return temp;
+}
+inline ::proto::ErrorReturn* RegisterOut::_internal_mutable_error() {
+  
+  if (error_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
+    error_ = p;
+  }
+  return error_;
+}
+inline ::proto::ErrorReturn* RegisterOut::mutable_error() {
+  // @@protoc_insertion_point(field_mutable:proto.RegisterOut.error)
+  return _internal_mutable_error();
+}
+inline void RegisterOut::set_allocated_error(::proto::ErrorReturn* error) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete error_;
+  }
+  if (error) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, error, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  error_ = error;
+  // @@protoc_insertion_point(field_set_allocated:proto.RegisterOut.error)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace proto
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::proto::ErrorReturn_ReturnCodeEnum> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::ErrorReturn_ReturnCodeEnum>() {
+  return ::proto::ErrorReturn_ReturnCodeEnum_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

@@ -1,1 +1,80 @@
 syntax = "proto3";
+
+package proto;
+
+service TweetService {
+	// Tweet a message.
+	rpc Tweet(TweetIn) returns (TweetOut) {}
+	// Follow a user.
+	rpc Follow(FollowIn) returns (FollowOut) {}
+	// Show tweet from a followy or yourself.
+	rpc Show(ShowIn) returns (ShowOut) {}
+	// Login to twitter.
+	rpc Login(LoginIn) returns (LoginOut) {}
+	// Logout the current user.
+	rpc Logout(LogoutIn) returns (LogoutOut) {}
+	// Register a new user.
+	rpc Register(RegisterIn) returns (RegisterOut) {}
+}
+
+message ErrorReturn {
+	enum ReturnCodeEnum {
+		ERROR = 0;
+		SUCCESS = 1;
+		LOGOUT = 2;
+	}
+	ReturnCodeEnum code = 1;
+}
+
+message TweetIn {
+	string user = 1;
+	string content = 2;
+	int64 time = 3;
+}
+
+message TweetOut {
+	ErrorReturn error = 1;
+}
+
+message FollowIn {
+	string name = 1;
+}
+
+message FollowOut {
+	ErrorReturn error = 1;
+}
+
+message ShowIn {
+	string user = 1;
+}
+
+message ShowOut {
+	repeated TweetIn tweets = 1;
+	ErrorReturn error = 2;
+}
+
+message LoginIn {
+	string user = 1;
+	string pass = 2;
+}
+
+message LoginOut {
+	ErrorReturn error = 1;
+}
+
+message LogoutIn {
+	// nothing.
+}
+
+message LogoutOut {
+	ErrorReturn error = 1;
+}
+
+message RegisterIn {
+	string name = 1;
+	string pass = 2;
+}
+
+message RegisterOut {
+	ErrorReturn error = 1;
+}
