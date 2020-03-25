@@ -380,30 +380,31 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_Tweet_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013Tweet.proto\022\005proto\"t\n\013ErrorReturn\022/\n\004c"
+  "\n\013Tweet.proto\022\005proto\"\177\n\013ErrorReturn\022/\n\004c"
   "ode\030\001 \001(\0162!.proto.ErrorReturn.ReturnCode"
-  "Enum\"4\n\016ReturnCodeEnum\022\t\n\005ERROR\020\000\022\013\n\007SUC"
-  "CESS\020\001\022\n\n\006LOGOUT\020\002\"6\n\007TweetIn\022\014\n\004user\030\001 "
-  "\001(\t\022\017\n\007content\030\002 \001(\t\022\014\n\004time\030\003 \001(\003\"-\n\010Tw"
-  "eetOut\022!\n\005error\030\001 \001(\0132\022.proto.ErrorRetur"
-  "n\"\030\n\010FollowIn\022\014\n\004name\030\001 \001(\t\".\n\tFollowOut"
-  "\022!\n\005error\030\001 \001(\0132\022.proto.ErrorReturn\"\026\n\006S"
-  "howIn\022\014\n\004user\030\001 \001(\t\"L\n\007ShowOut\022\036\n\006tweets"
-  "\030\001 \003(\0132\016.proto.TweetIn\022!\n\005error\030\002 \001(\0132\022."
-  "proto.ErrorReturn\"%\n\007LoginIn\022\014\n\004user\030\001 \001"
-  "(\t\022\014\n\004pass\030\002 \001(\t\"-\n\010LoginOut\022!\n\005error\030\001 "
-  "\001(\0132\022.proto.ErrorReturn\"\n\n\010LogoutIn\".\n\tL"
-  "ogoutOut\022!\n\005error\030\001 \001(\0132\022.proto.ErrorRet"
-  "urn\"(\n\nRegisterIn\022\014\n\004name\030\001 \001(\t\022\014\n\004pass\030"
-  "\002 \001(\t\"0\n\013RegisterOut\022!\n\005error\030\001 \001(\0132\022.pr"
-  "oto.ErrorReturn2\242\002\n\014TweetService\022*\n\005Twee"
-  "t\022\016.proto.TweetIn\032\017.proto.TweetOut\"\000\022-\n\006"
-  "Follow\022\017.proto.FollowIn\032\020.proto.FollowOu"
-  "t\"\000\022\'\n\004Show\022\r.proto.ShowIn\032\016.proto.ShowO"
-  "ut\"\000\022*\n\005Login\022\016.proto.LoginIn\032\017.proto.Lo"
-  "ginOut\"\000\022-\n\006Logout\022\017.proto.LogoutIn\032\020.pr"
-  "oto.LogoutOut\"\000\0223\n\010Register\022\021.proto.Regi"
-  "sterIn\032\022.proto.RegisterOut\"\000b\006proto3"
+  "Enum\"\?\n\016ReturnCodeEnum\022\021\n\rUNKNOWN_ERROR\020"
+  "\000\022\016\n\nSUCCESSFUL\020\001\022\n\n\006LOGOUT\020\002\"6\n\007TweetIn"
+  "\022\014\n\004user\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022\014\n\004time\030"
+  "\003 \001(\003\"-\n\010TweetOut\022!\n\005error\030\001 \001(\0132\022.proto"
+  ".ErrorReturn\"\030\n\010FollowIn\022\014\n\004name\030\001 \001(\t\"."
+  "\n\tFollowOut\022!\n\005error\030\001 \001(\0132\022.proto.Error"
+  "Return\"\026\n\006ShowIn\022\014\n\004user\030\001 \001(\t\"L\n\007ShowOu"
+  "t\022\036\n\006tweets\030\001 \003(\0132\016.proto.TweetIn\022!\n\005err"
+  "or\030\002 \001(\0132\022.proto.ErrorReturn\"%\n\007LoginIn\022"
+  "\014\n\004user\030\001 \001(\t\022\014\n\004pass\030\002 \001(\t\"-\n\010LoginOut\022"
+  "!\n\005error\030\001 \001(\0132\022.proto.ErrorReturn\"\n\n\010Lo"
+  "goutIn\".\n\tLogoutOut\022!\n\005error\030\001 \001(\0132\022.pro"
+  "to.ErrorReturn\"(\n\nRegisterIn\022\014\n\004name\030\001 \001"
+  "(\t\022\014\n\004pass\030\002 \001(\t\"0\n\013RegisterOut\022!\n\005error"
+  "\030\001 \001(\0132\022.proto.ErrorReturn2\242\002\n\014TweetServ"
+  "ice\022*\n\005Tweet\022\016.proto.TweetIn\032\017.proto.Twe"
+  "etOut\"\000\022-\n\006Follow\022\017.proto.FollowIn\032\020.pro"
+  "to.FollowOut\"\000\022\'\n\004Show\022\r.proto.ShowIn\032\016."
+  "proto.ShowOut\"\000\022*\n\005Login\022\016.proto.LoginIn"
+  "\032\017.proto.LoginOut\"\000\022-\n\006Logout\022\017.proto.Lo"
+  "goutIn\032\020.proto.LogoutOut\"\000\0223\n\010Register\022\021"
+  ".proto.RegisterIn\032\022.proto.RegisterOut\"\000b"
+  "\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Tweet_2eproto_deps[1] = {
 };
@@ -425,7 +426,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Twe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Tweet_2eproto_once;
 static bool descriptor_table_Tweet_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Tweet_2eproto = {
-  &descriptor_table_Tweet_2eproto_initialized, descriptor_table_protodef_Tweet_2eproto, "Tweet.proto", 956,
+  &descriptor_table_Tweet_2eproto_initialized, descriptor_table_protodef_Tweet_2eproto, "Tweet.proto", 967,
   &descriptor_table_Tweet_2eproto_once, descriptor_table_Tweet_2eproto_sccs, descriptor_table_Tweet_2eproto_deps, 13, 0,
   schemas, file_default_instances, TableStruct_Tweet_2eproto::offsets,
   file_level_metadata_Tweet_2eproto, 13, file_level_enum_descriptors_Tweet_2eproto, file_level_service_descriptors_Tweet_2eproto,
@@ -450,8 +451,8 @@ bool ErrorReturn_ReturnCodeEnum_IsValid(int value) {
 }
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::ERROR;
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::SUCCESS;
+constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::UNKNOWN_ERROR;
+constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::SUCCESSFUL;
 constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::LOGOUT;
 constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::ReturnCodeEnum_MIN;
 constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::ReturnCodeEnum_MAX;

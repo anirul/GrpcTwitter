@@ -39,6 +39,8 @@ add_library(TweetLib
     ${PROJECT_SOURCE_DIR}/TweetLib/Client.cpp
     ${PROJECT_SOURCE_DIR}/TweetLib/Server.h
     ${PROJECT_SOURCE_DIR}/TweetLib/Server.cpp
+    ${PROJECT_SOURCE_DIR}/TweetLib/Storage.h
+    ${PROJECT_SOURCE_DIR}/TweetLib/Storage.cpp
 )
 
 target_link_libraries(TweetLib
@@ -57,14 +59,19 @@ add_executable(TweetTest
     ${PROJECT_SOURCE_DIR}/TweetTest/ClientTest.cpp
     ${PROJECT_SOURCE_DIR}/TweetTest/ServerTest.h
     ${PROJECT_SOURCE_DIR}/TweetTest/ServerTest.cpp
+    ${PROJECT_SOURCE_DIR}/TweetTest/StorageTest.h
+    ${PROJECT_SOURCE_DIR}/TweetTest/StorageTest.cpp
 )
 
 target_link_libraries(TweetTest
   PUBLIC
+    GrpcLib
     TweetLib
   PRIVATE
     GTest::gtest
     GTest::gtest_main
+    GTest::gmock 
+    GTest::gmock_main
     protobuf::libprotoc
     protobuf::libprotobuf 
     protobuf::libprotobuf-lite
@@ -79,6 +86,7 @@ add_executable(TweetServer
 
 target_link_libraries(TweetServer
   PUBLIC
+    GrpcLib
     TweetLib
   PRIVATE
     protobuf::libprotoc
@@ -91,10 +99,13 @@ target_link_libraries(TweetServer
 
 add_executable(TweetClient
     ${PROJECT_SOURCE_DIR}/TweetClient/main.cpp
+    ${PROJECT_SOURCE_DIR}/TweetClient/Command.h
+    ${PROJECT_SOURCE_DIR}/TweetClient/Command.cpp
 )
 
 target_link_libraries(TweetClient
   PUBLIC
+    GrpcLib
     TweetLib
   PRIVATE
     protobuf::libprotoc

@@ -19,8 +19,8 @@ service TweetService {
 
 message ErrorReturn {
 	enum ReturnCodeEnum {
-		ERROR = 0;
-		SUCCESS = 1;
+		UNKNOWN_ERROR = 0;
+		SUCCESSFUL = 1;
 		LOGOUT = 2;
 	}
 	ReturnCodeEnum code = 1;
