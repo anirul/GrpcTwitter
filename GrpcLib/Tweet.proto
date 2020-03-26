@@ -17,15 +17,6 @@ service TweetService {
 	rpc Register(RegisterIn) returns (RegisterOut) {}
 }
 
-message ErrorReturn {
-	enum ReturnCodeEnum {
-		UNKNOWN_ERROR = 0;
-		SUCCESSFUL = 1;
-		LOGOUT = 2;
-	}
-	ReturnCodeEnum code = 1;
-}
-
 message TweetIn {
 	string user = 1;
 	string content = 2;
@@ -33,7 +24,7 @@ message TweetIn {
 }
 
 message TweetOut {
-	ErrorReturn error = 1;
+	bool error = 1;
 }
 
 message FollowIn {
@@ -41,7 +32,7 @@ message FollowIn {
 }
 
 message FollowOut {
-	ErrorReturn error = 1;
+	bool error = 1;
 }
 
 message ShowIn {
@@ -50,7 +41,7 @@ message ShowIn {
 
 message ShowOut {
 	repeated TweetIn tweets = 1;
-	ErrorReturn error = 2;
+	bool error = 2;
 }
 
 message LoginIn {
@@ -59,7 +50,7 @@ message LoginIn {
 }
 
 message LoginOut {
-	ErrorReturn error = 1;
+	bool error = 1;
 }
 
 message LogoutIn {
@@ -67,7 +58,7 @@ message LogoutIn {
 }
 
 message LogoutOut {
-	ErrorReturn error = 1;
+	bool error = 1;
 }
 
 message RegisterIn {
@@ -76,5 +67,5 @@ message RegisterIn {
 }
 
 message RegisterOut {
-	ErrorReturn error = 1;
+	bool error = 1;
 }

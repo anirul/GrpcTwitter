@@ -71,7 +71,7 @@ namespace client {
 		proto::TweetIn tweet_in{};
 		tweet_in.set_content(text);
 		proto::TweetOut tweet_out = client_->Tweet(tweet_in);
-		if (tweet_out.error().code() == proto::ErrorReturn::SUCCESSFUL)
+		if (!tweet_out.error())
 		{
 			std::cout << "Successful!" << std::endl;
 			return true;
@@ -90,7 +90,7 @@ namespace client {
 		proto::FollowIn follow_in{};
 		follow_in.set_name(follow);
 		proto::FollowOut follow_out = client_->Follow(follow_in);
-		if (follow_out.error().code() == proto::ErrorReturn::SUCCESSFUL)
+		if (!follow_out.error())
 		{
 			std::cout 
 				<< "Successfully following: [" 
@@ -113,7 +113,7 @@ namespace client {
 		proto::ShowIn show_in{};
 		show_in.set_user(user);
 		proto::ShowOut show_out = client_->Show(show_in);
-		if (show_out.error().code() == proto::ErrorReturn::SUCCESSFUL)
+		if (!show_out.error())
 		{
 			if (!show_out.mutable_tweets()->empty())
 			{
@@ -153,7 +153,7 @@ namespace client {
 		login_in.set_user(name);
 		login_in.set_pass(pass);
 		proto::LoginOut login_out = client_->Login(login_in);
-		if (login_out.error().code() == proto::ErrorReturn::SUCCESSFUL)
+		if (!login_out.error())
 		{
 			std::cout 
 				<< "successfully log in as : [" 
@@ -171,7 +171,7 @@ namespace client {
 		std::cout << "LOGOUT" << std::endl;
 		proto::LogoutIn logout_in{};
 		proto::LogoutOut logout_out = client_->Logout(logout_in);
-		if (logout_out.error().code() == proto::ErrorReturn::SUCCESSFUL)
+		if (!logout_out.error())
 		{
 			std::cout << "Successful!" << std::endl;
 			return true;
@@ -195,7 +195,7 @@ namespace client {
 		register_in.set_name(name);
 		register_in.set_pass(pass);
 		proto::RegisterOut register_out = client_->Register(register_in);
-		if (register_out.error().code() == proto::ErrorReturn::SUCCESSFUL)
+		if (!register_out.error())
 		{
 			std::cout << "Successful!" << std::endl;
 			return true;

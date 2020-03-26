@@ -31,7 +31,6 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -48,7 +47,7 @@ struct TableStruct_Tweet_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[13]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[12]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -56,9 +55,6 @@ struct TableStruct_Tweet_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Tweet_2eproto;
 namespace proto {
-class ErrorReturn;
-class ErrorReturnDefaultTypeInternal;
-extern ErrorReturnDefaultTypeInternal _ErrorReturn_default_instance_;
 class FollowIn;
 class FollowInDefaultTypeInternal;
 extern FollowInDefaultTypeInternal _FollowIn_default_instance_;
@@ -97,7 +93,6 @@ class TweetOutDefaultTypeInternal;
 extern TweetOutDefaultTypeInternal _TweetOut_default_instance_;
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
-template<> ::proto::ErrorReturn* Arena::CreateMaybeMessage<::proto::ErrorReturn>(Arena*);
 template<> ::proto::FollowIn* Arena::CreateMaybeMessage<::proto::FollowIn>(Arena*);
 template<> ::proto::FollowOut* Arena::CreateMaybeMessage<::proto::FollowOut>(Arena*);
 template<> ::proto::LoginIn* Arena::CreateMaybeMessage<::proto::LoginIn>(Arena*);
@@ -113,193 +108,7 @@ template<> ::proto::TweetOut* Arena::CreateMaybeMessage<::proto::TweetOut>(Arena
 PROTOBUF_NAMESPACE_CLOSE
 namespace proto {
 
-enum ErrorReturn_ReturnCodeEnum : int {
-  ErrorReturn_ReturnCodeEnum_UNKNOWN_ERROR = 0,
-  ErrorReturn_ReturnCodeEnum_SUCCESSFUL = 1,
-  ErrorReturn_ReturnCodeEnum_LOGOUT = 2,
-  ErrorReturn_ReturnCodeEnum_ErrorReturn_ReturnCodeEnum_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  ErrorReturn_ReturnCodeEnum_ErrorReturn_ReturnCodeEnum_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool ErrorReturn_ReturnCodeEnum_IsValid(int value);
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MIN = ErrorReturn_ReturnCodeEnum_UNKNOWN_ERROR;
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MAX = ErrorReturn_ReturnCodeEnum_LOGOUT;
-constexpr int ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_ARRAYSIZE = ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ErrorReturn_ReturnCodeEnum_descriptor();
-template<typename T>
-inline const std::string& ErrorReturn_ReturnCodeEnum_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, ErrorReturn_ReturnCodeEnum>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function ErrorReturn_ReturnCodeEnum_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    ErrorReturn_ReturnCodeEnum_descriptor(), enum_t_value);
-}
-inline bool ErrorReturn_ReturnCodeEnum_Parse(
-    const std::string& name, ErrorReturn_ReturnCodeEnum* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ErrorReturn_ReturnCodeEnum>(
-    ErrorReturn_ReturnCodeEnum_descriptor(), name, value);
-}
 // ===================================================================
-
-class ErrorReturn :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.ErrorReturn) */ {
- public:
-  ErrorReturn();
-  virtual ~ErrorReturn();
-
-  ErrorReturn(const ErrorReturn& from);
-  ErrorReturn(ErrorReturn&& from) noexcept
-    : ErrorReturn() {
-    *this = ::std::move(from);
-  }
-
-  inline ErrorReturn& operator=(const ErrorReturn& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline ErrorReturn& operator=(ErrorReturn&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const ErrorReturn& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ErrorReturn* internal_default_instance() {
-    return reinterpret_cast<const ErrorReturn*>(
-               &_ErrorReturn_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    0;
-
-  friend void swap(ErrorReturn& a, ErrorReturn& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(ErrorReturn* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline ErrorReturn* New() const final {
-    return CreateMaybeMessage<ErrorReturn>(nullptr);
-  }
-
-  ErrorReturn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<ErrorReturn>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const ErrorReturn& from);
-  void MergeFrom(const ErrorReturn& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(ErrorReturn* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.ErrorReturn";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Tweet_2eproto);
-    return ::descriptor_table_Tweet_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  typedef ErrorReturn_ReturnCodeEnum ReturnCodeEnum;
-  static constexpr ReturnCodeEnum UNKNOWN_ERROR =
-    ErrorReturn_ReturnCodeEnum_UNKNOWN_ERROR;
-  static constexpr ReturnCodeEnum SUCCESSFUL =
-    ErrorReturn_ReturnCodeEnum_SUCCESSFUL;
-  static constexpr ReturnCodeEnum LOGOUT =
-    ErrorReturn_ReturnCodeEnum_LOGOUT;
-  static inline bool ReturnCodeEnum_IsValid(int value) {
-    return ErrorReturn_ReturnCodeEnum_IsValid(value);
-  }
-  static constexpr ReturnCodeEnum ReturnCodeEnum_MIN =
-    ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MIN;
-  static constexpr ReturnCodeEnum ReturnCodeEnum_MAX =
-    ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_MAX;
-  static constexpr int ReturnCodeEnum_ARRAYSIZE =
-    ErrorReturn_ReturnCodeEnum_ReturnCodeEnum_ARRAYSIZE;
-  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  ReturnCodeEnum_descriptor() {
-    return ErrorReturn_ReturnCodeEnum_descriptor();
-  }
-  template<typename T>
-  static inline const std::string& ReturnCodeEnum_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, ReturnCodeEnum>::value ||
-      ::std::is_integral<T>::value,
-      "Incorrect type passed to function ReturnCodeEnum_Name.");
-    return ErrorReturn_ReturnCodeEnum_Name(enum_t_value);
-  }
-  static inline bool ReturnCodeEnum_Parse(const std::string& name,
-      ReturnCodeEnum* value) {
-    return ErrorReturn_ReturnCodeEnum_Parse(name, value);
-  }
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kCodeFieldNumber = 1,
-  };
-  // .proto.ErrorReturn.ReturnCodeEnum code = 1;
-  void clear_code();
-  ::proto::ErrorReturn_ReturnCodeEnum code() const;
-  void set_code(::proto::ErrorReturn_ReturnCodeEnum value);
-  private:
-  ::proto::ErrorReturn_ReturnCodeEnum _internal_code() const;
-  void _internal_set_code(::proto::ErrorReturn_ReturnCodeEnum value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:proto.ErrorReturn)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  int code_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_Tweet_2eproto;
-};
-// -------------------------------------------------------------------
 
 class TweetIn :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.TweetIn) */ {
@@ -343,7 +152,7 @@ class TweetIn :
                &_TweetIn_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    0;
 
   friend void swap(TweetIn& a, TweetIn& b) {
     a.Swap(&b);
@@ -507,7 +316,7 @@ class TweetOut :
                &_TweetOut_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    1;
 
   friend void swap(TweetOut& a, TweetOut& b) {
     a.Swap(&b);
@@ -573,19 +382,13 @@ class TweetOut :
   enum : int {
     kErrorFieldNumber = 1,
   };
-  // .proto.ErrorReturn error = 1;
-  bool has_error() const;
-  private:
-  bool _internal_has_error() const;
-  public:
+  // bool error = 1;
   void clear_error();
-  const ::proto::ErrorReturn& error() const;
-  ::proto::ErrorReturn* release_error();
-  ::proto::ErrorReturn* mutable_error();
-  void set_allocated_error(::proto::ErrorReturn* error);
+  bool error() const;
+  void set_error(bool value);
   private:
-  const ::proto::ErrorReturn& _internal_error() const;
-  ::proto::ErrorReturn* _internal_mutable_error();
+  bool _internal_error() const;
+  void _internal_set_error(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.TweetOut)
@@ -593,7 +396,7 @@ class TweetOut :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::ErrorReturn* error_;
+  bool error_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Tweet_2eproto;
 };
@@ -641,7 +444,7 @@ class FollowIn :
                &_FollowIn_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    2;
 
   friend void swap(FollowIn& a, FollowIn& b) {
     a.Swap(&b);
@@ -776,7 +579,7 @@ class FollowOut :
                &_FollowOut_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    3;
 
   friend void swap(FollowOut& a, FollowOut& b) {
     a.Swap(&b);
@@ -842,19 +645,13 @@ class FollowOut :
   enum : int {
     kErrorFieldNumber = 1,
   };
-  // .proto.ErrorReturn error = 1;
-  bool has_error() const;
-  private:
-  bool _internal_has_error() const;
-  public:
+  // bool error = 1;
   void clear_error();
-  const ::proto::ErrorReturn& error() const;
-  ::proto::ErrorReturn* release_error();
-  ::proto::ErrorReturn* mutable_error();
-  void set_allocated_error(::proto::ErrorReturn* error);
+  bool error() const;
+  void set_error(bool value);
   private:
-  const ::proto::ErrorReturn& _internal_error() const;
-  ::proto::ErrorReturn* _internal_mutable_error();
+  bool _internal_error() const;
+  void _internal_set_error(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.FollowOut)
@@ -862,7 +659,7 @@ class FollowOut :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::ErrorReturn* error_;
+  bool error_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Tweet_2eproto;
 };
@@ -910,7 +707,7 @@ class ShowIn :
                &_ShowIn_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    4;
 
   friend void swap(ShowIn& a, ShowIn& b) {
     a.Swap(&b);
@@ -1045,7 +842,7 @@ class ShowOut :
                &_ShowOut_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    5;
 
   friend void swap(ShowOut& a, ShowOut& b) {
     a.Swap(&b);
@@ -1130,19 +927,13 @@ class ShowOut :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn >&
       tweets() const;
 
-  // .proto.ErrorReturn error = 2;
-  bool has_error() const;
-  private:
-  bool _internal_has_error() const;
-  public:
+  // bool error = 2;
   void clear_error();
-  const ::proto::ErrorReturn& error() const;
-  ::proto::ErrorReturn* release_error();
-  ::proto::ErrorReturn* mutable_error();
-  void set_allocated_error(::proto::ErrorReturn* error);
+  bool error() const;
+  void set_error(bool value);
   private:
-  const ::proto::ErrorReturn& _internal_error() const;
-  ::proto::ErrorReturn* _internal_mutable_error();
+  bool _internal_error() const;
+  void _internal_set_error(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.ShowOut)
@@ -1151,7 +942,7 @@ class ShowOut :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::TweetIn > tweets_;
-  ::proto::ErrorReturn* error_;
+  bool error_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Tweet_2eproto;
 };
@@ -1199,7 +990,7 @@ class LoginIn :
                &_LoginIn_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    6;
 
   friend void swap(LoginIn& a, LoginIn& b) {
     a.Swap(&b);
@@ -1352,7 +1143,7 @@ class LoginOut :
                &_LoginOut_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    7;
 
   friend void swap(LoginOut& a, LoginOut& b) {
     a.Swap(&b);
@@ -1418,19 +1209,13 @@ class LoginOut :
   enum : int {
     kErrorFieldNumber = 1,
   };
-  // .proto.ErrorReturn error = 1;
-  bool has_error() const;
-  private:
-  bool _internal_has_error() const;
-  public:
+  // bool error = 1;
   void clear_error();
-  const ::proto::ErrorReturn& error() const;
-  ::proto::ErrorReturn* release_error();
-  ::proto::ErrorReturn* mutable_error();
-  void set_allocated_error(::proto::ErrorReturn* error);
+  bool error() const;
+  void set_error(bool value);
   private:
-  const ::proto::ErrorReturn& _internal_error() const;
-  ::proto::ErrorReturn* _internal_mutable_error();
+  bool _internal_error() const;
+  void _internal_set_error(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.LoginOut)
@@ -1438,7 +1223,7 @@ class LoginOut :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::ErrorReturn* error_;
+  bool error_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Tweet_2eproto;
 };
@@ -1486,7 +1271,7 @@ class LogoutIn :
                &_LogoutIn_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    8;
 
   friend void swap(LogoutIn& a, LogoutIn& b) {
     a.Swap(&b);
@@ -1601,7 +1386,7 @@ class LogoutOut :
                &_LogoutOut_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    9;
 
   friend void swap(LogoutOut& a, LogoutOut& b) {
     a.Swap(&b);
@@ -1667,19 +1452,13 @@ class LogoutOut :
   enum : int {
     kErrorFieldNumber = 1,
   };
-  // .proto.ErrorReturn error = 1;
-  bool has_error() const;
-  private:
-  bool _internal_has_error() const;
-  public:
+  // bool error = 1;
   void clear_error();
-  const ::proto::ErrorReturn& error() const;
-  ::proto::ErrorReturn* release_error();
-  ::proto::ErrorReturn* mutable_error();
-  void set_allocated_error(::proto::ErrorReturn* error);
+  bool error() const;
+  void set_error(bool value);
   private:
-  const ::proto::ErrorReturn& _internal_error() const;
-  ::proto::ErrorReturn* _internal_mutable_error();
+  bool _internal_error() const;
+  void _internal_set_error(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.LogoutOut)
@@ -1687,7 +1466,7 @@ class LogoutOut :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::ErrorReturn* error_;
+  bool error_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Tweet_2eproto;
 };
@@ -1735,7 +1514,7 @@ class RegisterIn :
                &_RegisterIn_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
   friend void swap(RegisterIn& a, RegisterIn& b) {
     a.Swap(&b);
@@ -1888,7 +1667,7 @@ class RegisterOut :
                &_RegisterOut_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    11;
 
   friend void swap(RegisterOut& a, RegisterOut& b) {
     a.Swap(&b);
@@ -1954,19 +1733,13 @@ class RegisterOut :
   enum : int {
     kErrorFieldNumber = 1,
   };
-  // .proto.ErrorReturn error = 1;
-  bool has_error() const;
-  private:
-  bool _internal_has_error() const;
-  public:
+  // bool error = 1;
   void clear_error();
-  const ::proto::ErrorReturn& error() const;
-  ::proto::ErrorReturn* release_error();
-  ::proto::ErrorReturn* mutable_error();
-  void set_allocated_error(::proto::ErrorReturn* error);
+  bool error() const;
+  void set_error(bool value);
   private:
-  const ::proto::ErrorReturn& _internal_error() const;
-  ::proto::ErrorReturn* _internal_mutable_error();
+  bool _internal_error() const;
+  void _internal_set_error(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:proto.RegisterOut)
@@ -1974,7 +1747,7 @@ class RegisterOut :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::ErrorReturn* error_;
+  bool error_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Tweet_2eproto;
 };
@@ -1987,30 +1760,6 @@ class RegisterOut :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// ErrorReturn
-
-// .proto.ErrorReturn.ReturnCodeEnum code = 1;
-inline void ErrorReturn::clear_code() {
-  code_ = 0;
-}
-inline ::proto::ErrorReturn_ReturnCodeEnum ErrorReturn::_internal_code() const {
-  return static_cast< ::proto::ErrorReturn_ReturnCodeEnum >(code_);
-}
-inline ::proto::ErrorReturn_ReturnCodeEnum ErrorReturn::code() const {
-  // @@protoc_insertion_point(field_get:proto.ErrorReturn.code)
-  return _internal_code();
-}
-inline void ErrorReturn::_internal_set_code(::proto::ErrorReturn_ReturnCodeEnum value) {
-  
-  code_ = value;
-}
-inline void ErrorReturn::set_code(::proto::ErrorReturn_ReturnCodeEnum value) {
-  _internal_set_code(value);
-  // @@protoc_insertion_point(field_set:proto.ErrorReturn.code)
-}
-
-// -------------------------------------------------------------------
-
 // TweetIn
 
 // string user = 1;
@@ -2157,64 +1906,24 @@ inline void TweetIn::set_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
 
 // TweetOut
 
-// .proto.ErrorReturn error = 1;
-inline bool TweetOut::_internal_has_error() const {
-  return this != internal_default_instance() && error_ != nullptr;
-}
-inline bool TweetOut::has_error() const {
-  return _internal_has_error();
-}
+// bool error = 1;
 inline void TweetOut::clear_error() {
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
 }
-inline const ::proto::ErrorReturn& TweetOut::_internal_error() const {
-  const ::proto::ErrorReturn* p = error_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
-      &::proto::_ErrorReturn_default_instance_);
+inline bool TweetOut::_internal_error() const {
+  return error_;
 }
-inline const ::proto::ErrorReturn& TweetOut::error() const {
+inline bool TweetOut::error() const {
   // @@protoc_insertion_point(field_get:proto.TweetOut.error)
   return _internal_error();
 }
-inline ::proto::ErrorReturn* TweetOut::release_error() {
-  // @@protoc_insertion_point(field_release:proto.TweetOut.error)
+inline void TweetOut::_internal_set_error(bool value) {
   
-  ::proto::ErrorReturn* temp = error_;
-  error_ = nullptr;
-  return temp;
+  error_ = value;
 }
-inline ::proto::ErrorReturn* TweetOut::_internal_mutable_error() {
-  
-  if (error_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
-    error_ = p;
-  }
-  return error_;
-}
-inline ::proto::ErrorReturn* TweetOut::mutable_error() {
-  // @@protoc_insertion_point(field_mutable:proto.TweetOut.error)
-  return _internal_mutable_error();
-}
-inline void TweetOut::set_allocated_error(::proto::ErrorReturn* error) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete error_;
-  }
-  if (error) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  error_ = error;
-  // @@protoc_insertion_point(field_set_allocated:proto.TweetOut.error)
+inline void TweetOut::set_error(bool value) {
+  _internal_set_error(value);
+  // @@protoc_insertion_point(field_set:proto.TweetOut.error)
 }
 
 // -------------------------------------------------------------------
@@ -2285,64 +1994,24 @@ inline void FollowIn::set_allocated_name(std::string* name) {
 
 // FollowOut
 
-// .proto.ErrorReturn error = 1;
-inline bool FollowOut::_internal_has_error() const {
-  return this != internal_default_instance() && error_ != nullptr;
-}
-inline bool FollowOut::has_error() const {
-  return _internal_has_error();
-}
+// bool error = 1;
 inline void FollowOut::clear_error() {
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
 }
-inline const ::proto::ErrorReturn& FollowOut::_internal_error() const {
-  const ::proto::ErrorReturn* p = error_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
-      &::proto::_ErrorReturn_default_instance_);
+inline bool FollowOut::_internal_error() const {
+  return error_;
 }
-inline const ::proto::ErrorReturn& FollowOut::error() const {
+inline bool FollowOut::error() const {
   // @@protoc_insertion_point(field_get:proto.FollowOut.error)
   return _internal_error();
 }
-inline ::proto::ErrorReturn* FollowOut::release_error() {
-  // @@protoc_insertion_point(field_release:proto.FollowOut.error)
+inline void FollowOut::_internal_set_error(bool value) {
   
-  ::proto::ErrorReturn* temp = error_;
-  error_ = nullptr;
-  return temp;
+  error_ = value;
 }
-inline ::proto::ErrorReturn* FollowOut::_internal_mutable_error() {
-  
-  if (error_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
-    error_ = p;
-  }
-  return error_;
-}
-inline ::proto::ErrorReturn* FollowOut::mutable_error() {
-  // @@protoc_insertion_point(field_mutable:proto.FollowOut.error)
-  return _internal_mutable_error();
-}
-inline void FollowOut::set_allocated_error(::proto::ErrorReturn* error) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete error_;
-  }
-  if (error) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  error_ = error;
-  // @@protoc_insertion_point(field_set_allocated:proto.FollowOut.error)
+inline void FollowOut::set_error(bool value) {
+  _internal_set_error(value);
+  // @@protoc_insertion_point(field_set:proto.FollowOut.error)
 }
 
 // -------------------------------------------------------------------
@@ -2452,64 +2121,24 @@ ShowOut::tweets() const {
   return tweets_;
 }
 
-// .proto.ErrorReturn error = 2;
-inline bool ShowOut::_internal_has_error() const {
-  return this != internal_default_instance() && error_ != nullptr;
-}
-inline bool ShowOut::has_error() const {
-  return _internal_has_error();
-}
+// bool error = 2;
 inline void ShowOut::clear_error() {
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
 }
-inline const ::proto::ErrorReturn& ShowOut::_internal_error() const {
-  const ::proto::ErrorReturn* p = error_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
-      &::proto::_ErrorReturn_default_instance_);
+inline bool ShowOut::_internal_error() const {
+  return error_;
 }
-inline const ::proto::ErrorReturn& ShowOut::error() const {
+inline bool ShowOut::error() const {
   // @@protoc_insertion_point(field_get:proto.ShowOut.error)
   return _internal_error();
 }
-inline ::proto::ErrorReturn* ShowOut::release_error() {
-  // @@protoc_insertion_point(field_release:proto.ShowOut.error)
+inline void ShowOut::_internal_set_error(bool value) {
   
-  ::proto::ErrorReturn* temp = error_;
-  error_ = nullptr;
-  return temp;
+  error_ = value;
 }
-inline ::proto::ErrorReturn* ShowOut::_internal_mutable_error() {
-  
-  if (error_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
-    error_ = p;
-  }
-  return error_;
-}
-inline ::proto::ErrorReturn* ShowOut::mutable_error() {
-  // @@protoc_insertion_point(field_mutable:proto.ShowOut.error)
-  return _internal_mutable_error();
-}
-inline void ShowOut::set_allocated_error(::proto::ErrorReturn* error) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete error_;
-  }
-  if (error) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  error_ = error;
-  // @@protoc_insertion_point(field_set_allocated:proto.ShowOut.error)
+inline void ShowOut::set_error(bool value) {
+  _internal_set_error(value);
+  // @@protoc_insertion_point(field_set:proto.ShowOut.error)
 }
 
 // -------------------------------------------------------------------
@@ -2640,64 +2269,24 @@ inline void LoginIn::set_allocated_pass(std::string* pass) {
 
 // LoginOut
 
-// .proto.ErrorReturn error = 1;
-inline bool LoginOut::_internal_has_error() const {
-  return this != internal_default_instance() && error_ != nullptr;
-}
-inline bool LoginOut::has_error() const {
-  return _internal_has_error();
-}
+// bool error = 1;
 inline void LoginOut::clear_error() {
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
 }
-inline const ::proto::ErrorReturn& LoginOut::_internal_error() const {
-  const ::proto::ErrorReturn* p = error_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
-      &::proto::_ErrorReturn_default_instance_);
+inline bool LoginOut::_internal_error() const {
+  return error_;
 }
-inline const ::proto::ErrorReturn& LoginOut::error() const {
+inline bool LoginOut::error() const {
   // @@protoc_insertion_point(field_get:proto.LoginOut.error)
   return _internal_error();
 }
-inline ::proto::ErrorReturn* LoginOut::release_error() {
-  // @@protoc_insertion_point(field_release:proto.LoginOut.error)
+inline void LoginOut::_internal_set_error(bool value) {
   
-  ::proto::ErrorReturn* temp = error_;
-  error_ = nullptr;
-  return temp;
+  error_ = value;
 }
-inline ::proto::ErrorReturn* LoginOut::_internal_mutable_error() {
-  
-  if (error_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
-    error_ = p;
-  }
-  return error_;
-}
-inline ::proto::ErrorReturn* LoginOut::mutable_error() {
-  // @@protoc_insertion_point(field_mutable:proto.LoginOut.error)
-  return _internal_mutable_error();
-}
-inline void LoginOut::set_allocated_error(::proto::ErrorReturn* error) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete error_;
-  }
-  if (error) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  error_ = error;
-  // @@protoc_insertion_point(field_set_allocated:proto.LoginOut.error)
+inline void LoginOut::set_error(bool value) {
+  _internal_set_error(value);
+  // @@protoc_insertion_point(field_set:proto.LoginOut.error)
 }
 
 // -------------------------------------------------------------------
@@ -2708,64 +2297,24 @@ inline void LoginOut::set_allocated_error(::proto::ErrorReturn* error) {
 
 // LogoutOut
 
-// .proto.ErrorReturn error = 1;
-inline bool LogoutOut::_internal_has_error() const {
-  return this != internal_default_instance() && error_ != nullptr;
-}
-inline bool LogoutOut::has_error() const {
-  return _internal_has_error();
-}
+// bool error = 1;
 inline void LogoutOut::clear_error() {
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
 }
-inline const ::proto::ErrorReturn& LogoutOut::_internal_error() const {
-  const ::proto::ErrorReturn* p = error_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
-      &::proto::_ErrorReturn_default_instance_);
+inline bool LogoutOut::_internal_error() const {
+  return error_;
 }
-inline const ::proto::ErrorReturn& LogoutOut::error() const {
+inline bool LogoutOut::error() const {
   // @@protoc_insertion_point(field_get:proto.LogoutOut.error)
   return _internal_error();
 }
-inline ::proto::ErrorReturn* LogoutOut::release_error() {
-  // @@protoc_insertion_point(field_release:proto.LogoutOut.error)
+inline void LogoutOut::_internal_set_error(bool value) {
   
-  ::proto::ErrorReturn* temp = error_;
-  error_ = nullptr;
-  return temp;
+  error_ = value;
 }
-inline ::proto::ErrorReturn* LogoutOut::_internal_mutable_error() {
-  
-  if (error_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
-    error_ = p;
-  }
-  return error_;
-}
-inline ::proto::ErrorReturn* LogoutOut::mutable_error() {
-  // @@protoc_insertion_point(field_mutable:proto.LogoutOut.error)
-  return _internal_mutable_error();
-}
-inline void LogoutOut::set_allocated_error(::proto::ErrorReturn* error) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete error_;
-  }
-  if (error) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  error_ = error;
-  // @@protoc_insertion_point(field_set_allocated:proto.LogoutOut.error)
+inline void LogoutOut::set_error(bool value) {
+  _internal_set_error(value);
+  // @@protoc_insertion_point(field_set:proto.LogoutOut.error)
 }
 
 // -------------------------------------------------------------------
@@ -2896,64 +2445,24 @@ inline void RegisterIn::set_allocated_pass(std::string* pass) {
 
 // RegisterOut
 
-// .proto.ErrorReturn error = 1;
-inline bool RegisterOut::_internal_has_error() const {
-  return this != internal_default_instance() && error_ != nullptr;
-}
-inline bool RegisterOut::has_error() const {
-  return _internal_has_error();
-}
+// bool error = 1;
 inline void RegisterOut::clear_error() {
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
 }
-inline const ::proto::ErrorReturn& RegisterOut::_internal_error() const {
-  const ::proto::ErrorReturn* p = error_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::ErrorReturn*>(
-      &::proto::_ErrorReturn_default_instance_);
+inline bool RegisterOut::_internal_error() const {
+  return error_;
 }
-inline const ::proto::ErrorReturn& RegisterOut::error() const {
+inline bool RegisterOut::error() const {
   // @@protoc_insertion_point(field_get:proto.RegisterOut.error)
   return _internal_error();
 }
-inline ::proto::ErrorReturn* RegisterOut::release_error() {
-  // @@protoc_insertion_point(field_release:proto.RegisterOut.error)
+inline void RegisterOut::_internal_set_error(bool value) {
   
-  ::proto::ErrorReturn* temp = error_;
-  error_ = nullptr;
-  return temp;
+  error_ = value;
 }
-inline ::proto::ErrorReturn* RegisterOut::_internal_mutable_error() {
-  
-  if (error_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::ErrorReturn>(GetArenaNoVirtual());
-    error_ = p;
-  }
-  return error_;
-}
-inline ::proto::ErrorReturn* RegisterOut::mutable_error() {
-  // @@protoc_insertion_point(field_mutable:proto.RegisterOut.error)
-  return _internal_mutable_error();
-}
-inline void RegisterOut::set_allocated_error(::proto::ErrorReturn* error) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete error_;
-  }
-  if (error) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      error = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  error_ = error;
-  // @@protoc_insertion_point(field_set_allocated:proto.RegisterOut.error)
+inline void RegisterOut::set_error(bool value) {
+  _internal_set_error(value);
+  // @@protoc_insertion_point(field_set:proto.RegisterOut.error)
 }
 
 #ifdef __GNUC__
@@ -2981,22 +2490,10 @@ inline void RegisterOut::set_allocated_error(::proto::ErrorReturn* error) {
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace proto
-
-PROTOBUF_NAMESPACE_OPEN
-
-template <> struct is_proto_enum< ::proto::ErrorReturn_ReturnCodeEnum> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::proto::ErrorReturn_ReturnCodeEnum>() {
-  return ::proto::ErrorReturn_ReturnCodeEnum_descriptor();
-}
-
-PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

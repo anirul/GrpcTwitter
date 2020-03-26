@@ -14,13 +14,8 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_Tweet_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ErrorReturn_Tweet_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Tweet_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TweetIn_Tweet_2eproto;
 namespace proto {
-class ErrorReturnDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ErrorReturn> _instance;
-} _ErrorReturn_default_instance_;
 class TweetInDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TweetIn> _instance;
@@ -70,20 +65,6 @@ class RegisterOutDefaultTypeInternal {
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RegisterOut> _instance;
 } _RegisterOut_default_instance_;
 }  // namespace proto
-static void InitDefaultsscc_info_ErrorReturn_Tweet_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_ErrorReturn_default_instance_;
-    new (ptr) ::proto::ErrorReturn();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::ErrorReturn::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ErrorReturn_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ErrorReturn_Tweet_2eproto}, {}};
-
 static void InitDefaultsscc_info_FollowIn_Tweet_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -109,9 +90,8 @@ static void InitDefaultsscc_info_FollowOut_Tweet_2eproto() {
   ::proto::FollowOut::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_FollowOut_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_FollowOut_Tweet_2eproto}, {
-      &scc_info_ErrorReturn_Tweet_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FollowOut_Tweet_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FollowOut_Tweet_2eproto}, {}};
 
 static void InitDefaultsscc_info_LoginIn_Tweet_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -138,9 +118,8 @@ static void InitDefaultsscc_info_LoginOut_Tweet_2eproto() {
   ::proto::LoginOut::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LoginOut_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LoginOut_Tweet_2eproto}, {
-      &scc_info_ErrorReturn_Tweet_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LoginOut_Tweet_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LoginOut_Tweet_2eproto}, {}};
 
 static void InitDefaultsscc_info_LogoutIn_Tweet_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -167,9 +146,8 @@ static void InitDefaultsscc_info_LogoutOut_Tweet_2eproto() {
   ::proto::LogoutOut::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LogoutOut_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LogoutOut_Tweet_2eproto}, {
-      &scc_info_ErrorReturn_Tweet_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LogoutOut_Tweet_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LogoutOut_Tweet_2eproto}, {}};
 
 static void InitDefaultsscc_info_RegisterIn_Tweet_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -196,9 +174,8 @@ static void InitDefaultsscc_info_RegisterOut_Tweet_2eproto() {
   ::proto::RegisterOut::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RegisterOut_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_RegisterOut_Tweet_2eproto}, {
-      &scc_info_ErrorReturn_Tweet_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RegisterOut_Tweet_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RegisterOut_Tweet_2eproto}, {}};
 
 static void InitDefaultsscc_info_ShowIn_Tweet_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -225,10 +202,9 @@ static void InitDefaultsscc_info_ShowOut_Tweet_2eproto() {
   ::proto::ShowOut::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ShowOut_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_ShowOut_Tweet_2eproto}, {
-      &scc_info_TweetIn_Tweet_2eproto.base,
-      &scc_info_ErrorReturn_Tweet_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ShowOut_Tweet_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ShowOut_Tweet_2eproto}, {
+      &scc_info_TweetIn_Tweet_2eproto.base,}};
 
 static void InitDefaultsscc_info_TweetIn_Tweet_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -255,21 +231,14 @@ static void InitDefaultsscc_info_TweetOut_Tweet_2eproto() {
   ::proto::TweetOut::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TweetOut_Tweet_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_TweetOut_Tweet_2eproto}, {
-      &scc_info_ErrorReturn_Tweet_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TweetOut_Tweet_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TweetOut_Tweet_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Tweet_2eproto[13];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Tweet_2eproto[1];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Tweet_2eproto[12];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Tweet_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Tweet_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Tweet_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::ErrorReturn, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::ErrorReturn, code_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::TweetIn, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -348,23 +317,21 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Tweet_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::proto::RegisterOut, error_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::proto::ErrorReturn)},
-  { 6, -1, sizeof(::proto::TweetIn)},
-  { 14, -1, sizeof(::proto::TweetOut)},
-  { 20, -1, sizeof(::proto::FollowIn)},
-  { 26, -1, sizeof(::proto::FollowOut)},
-  { 32, -1, sizeof(::proto::ShowIn)},
-  { 38, -1, sizeof(::proto::ShowOut)},
-  { 45, -1, sizeof(::proto::LoginIn)},
-  { 52, -1, sizeof(::proto::LoginOut)},
-  { 58, -1, sizeof(::proto::LogoutIn)},
-  { 63, -1, sizeof(::proto::LogoutOut)},
-  { 69, -1, sizeof(::proto::RegisterIn)},
-  { 76, -1, sizeof(::proto::RegisterOut)},
+  { 0, -1, sizeof(::proto::TweetIn)},
+  { 8, -1, sizeof(::proto::TweetOut)},
+  { 14, -1, sizeof(::proto::FollowIn)},
+  { 20, -1, sizeof(::proto::FollowOut)},
+  { 26, -1, sizeof(::proto::ShowIn)},
+  { 32, -1, sizeof(::proto::ShowOut)},
+  { 39, -1, sizeof(::proto::LoginIn)},
+  { 46, -1, sizeof(::proto::LoginOut)},
+  { 52, -1, sizeof(::proto::LogoutIn)},
+  { 57, -1, sizeof(::proto::LogoutOut)},
+  { 63, -1, sizeof(::proto::RegisterIn)},
+  { 70, -1, sizeof(::proto::RegisterOut)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_ErrorReturn_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_TweetIn_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_TweetOut_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_FollowIn_default_instance_),
@@ -380,36 +347,28 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_Tweet_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013Tweet.proto\022\005proto\"\177\n\013ErrorReturn\022/\n\004c"
-  "ode\030\001 \001(\0162!.proto.ErrorReturn.ReturnCode"
-  "Enum\"\?\n\016ReturnCodeEnum\022\021\n\rUNKNOWN_ERROR\020"
-  "\000\022\016\n\nSUCCESSFUL\020\001\022\n\n\006LOGOUT\020\002\"6\n\007TweetIn"
-  "\022\014\n\004user\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022\014\n\004time\030"
-  "\003 \001(\003\"-\n\010TweetOut\022!\n\005error\030\001 \001(\0132\022.proto"
-  ".ErrorReturn\"\030\n\010FollowIn\022\014\n\004name\030\001 \001(\t\"."
-  "\n\tFollowOut\022!\n\005error\030\001 \001(\0132\022.proto.Error"
-  "Return\"\026\n\006ShowIn\022\014\n\004user\030\001 \001(\t\"L\n\007ShowOu"
-  "t\022\036\n\006tweets\030\001 \003(\0132\016.proto.TweetIn\022!\n\005err"
-  "or\030\002 \001(\0132\022.proto.ErrorReturn\"%\n\007LoginIn\022"
-  "\014\n\004user\030\001 \001(\t\022\014\n\004pass\030\002 \001(\t\"-\n\010LoginOut\022"
-  "!\n\005error\030\001 \001(\0132\022.proto.ErrorReturn\"\n\n\010Lo"
-  "goutIn\".\n\tLogoutOut\022!\n\005error\030\001 \001(\0132\022.pro"
-  "to.ErrorReturn\"(\n\nRegisterIn\022\014\n\004name\030\001 \001"
-  "(\t\022\014\n\004pass\030\002 \001(\t\"0\n\013RegisterOut\022!\n\005error"
-  "\030\001 \001(\0132\022.proto.ErrorReturn2\242\002\n\014TweetServ"
-  "ice\022*\n\005Tweet\022\016.proto.TweetIn\032\017.proto.Twe"
-  "etOut\"\000\022-\n\006Follow\022\017.proto.FollowIn\032\020.pro"
-  "to.FollowOut\"\000\022\'\n\004Show\022\r.proto.ShowIn\032\016."
-  "proto.ShowOut\"\000\022*\n\005Login\022\016.proto.LoginIn"
-  "\032\017.proto.LoginOut\"\000\022-\n\006Logout\022\017.proto.Lo"
-  "goutIn\032\020.proto.LogoutOut\"\000\0223\n\010Register\022\021"
-  ".proto.RegisterIn\032\022.proto.RegisterOut\"\000b"
-  "\006proto3"
+  "\n\013Tweet.proto\022\005proto\"6\n\007TweetIn\022\014\n\004user\030"
+  "\001 \001(\t\022\017\n\007content\030\002 \001(\t\022\014\n\004time\030\003 \001(\003\"\031\n\010"
+  "TweetOut\022\r\n\005error\030\001 \001(\010\"\030\n\010FollowIn\022\014\n\004n"
+  "ame\030\001 \001(\t\"\032\n\tFollowOut\022\r\n\005error\030\001 \001(\010\"\026\n"
+  "\006ShowIn\022\014\n\004user\030\001 \001(\t\"8\n\007ShowOut\022\036\n\006twee"
+  "ts\030\001 \003(\0132\016.proto.TweetIn\022\r\n\005error\030\002 \001(\010\""
+  "%\n\007LoginIn\022\014\n\004user\030\001 \001(\t\022\014\n\004pass\030\002 \001(\t\"\031"
+  "\n\010LoginOut\022\r\n\005error\030\001 \001(\010\"\n\n\010LogoutIn\"\032\n"
+  "\tLogoutOut\022\r\n\005error\030\001 \001(\010\"(\n\nRegisterIn\022"
+  "\014\n\004name\030\001 \001(\t\022\014\n\004pass\030\002 \001(\t\"\034\n\013RegisterO"
+  "ut\022\r\n\005error\030\001 \001(\0102\242\002\n\014TweetService\022*\n\005Tw"
+  "eet\022\016.proto.TweetIn\032\017.proto.TweetOut\"\000\022-"
+  "\n\006Follow\022\017.proto.FollowIn\032\020.proto.Follow"
+  "Out\"\000\022\'\n\004Show\022\r.proto.ShowIn\032\016.proto.Sho"
+  "wOut\"\000\022*\n\005Login\022\016.proto.LoginIn\032\017.proto."
+  "LoginOut\"\000\022-\n\006Logout\022\017.proto.LogoutIn\032\020."
+  "proto.LogoutOut\"\000\0223\n\010Register\022\021.proto.Re"
+  "gisterIn\032\022.proto.RegisterOut\"\000b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Tweet_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Tweet_2eproto_sccs[13] = {
-  &scc_info_ErrorReturn_Tweet_2eproto.base,
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Tweet_2eproto_sccs[12] = {
   &scc_info_FollowIn_Tweet_2eproto.base,
   &scc_info_FollowOut_Tweet_2eproto.base,
   &scc_info_LoginIn_Tweet_2eproto.base,
@@ -426,225 +385,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Twe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Tweet_2eproto_once;
 static bool descriptor_table_Tweet_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Tweet_2eproto = {
-  &descriptor_table_Tweet_2eproto_initialized, descriptor_table_protodef_Tweet_2eproto, "Tweet.proto", 967,
-  &descriptor_table_Tweet_2eproto_once, descriptor_table_Tweet_2eproto_sccs, descriptor_table_Tweet_2eproto_deps, 13, 0,
+  &descriptor_table_Tweet_2eproto_initialized, descriptor_table_protodef_Tweet_2eproto, "Tweet.proto", 718,
+  &descriptor_table_Tweet_2eproto_once, descriptor_table_Tweet_2eproto_sccs, descriptor_table_Tweet_2eproto_deps, 12, 0,
   schemas, file_default_instances, TableStruct_Tweet_2eproto::offsets,
-  file_level_metadata_Tweet_2eproto, 13, file_level_enum_descriptors_Tweet_2eproto, file_level_service_descriptors_Tweet_2eproto,
+  file_level_metadata_Tweet_2eproto, 12, file_level_enum_descriptors_Tweet_2eproto, file_level_service_descriptors_Tweet_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_Tweet_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Tweet_2eproto), true);
 namespace proto {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ErrorReturn_ReturnCodeEnum_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Tweet_2eproto);
-  return file_level_enum_descriptors_Tweet_2eproto[0];
-}
-bool ErrorReturn_ReturnCodeEnum_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::UNKNOWN_ERROR;
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::SUCCESSFUL;
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::LOGOUT;
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::ReturnCodeEnum_MIN;
-constexpr ErrorReturn_ReturnCodeEnum ErrorReturn::ReturnCodeEnum_MAX;
-constexpr int ErrorReturn::ReturnCodeEnum_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-
-// ===================================================================
-
-void ErrorReturn::InitAsDefaultInstance() {
-}
-class ErrorReturn::_Internal {
- public:
-};
-
-ErrorReturn::ErrorReturn()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.ErrorReturn)
-}
-ErrorReturn::ErrorReturn(const ErrorReturn& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  code_ = from.code_;
-  // @@protoc_insertion_point(copy_constructor:proto.ErrorReturn)
-}
-
-void ErrorReturn::SharedCtor() {
-  code_ = 0;
-}
-
-ErrorReturn::~ErrorReturn() {
-  // @@protoc_insertion_point(destructor:proto.ErrorReturn)
-  SharedDtor();
-}
-
-void ErrorReturn::SharedDtor() {
-}
-
-void ErrorReturn::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ErrorReturn& ErrorReturn::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ErrorReturn_Tweet_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void ErrorReturn::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.ErrorReturn)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  code_ = 0;
-  _internal_metadata_.Clear();
-}
-
-const char* ErrorReturn::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .proto.ErrorReturn.ReturnCodeEnum code = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-          _internal_set_code(static_cast<::proto::ErrorReturn_ReturnCodeEnum>(val));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ErrorReturn::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.ErrorReturn)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .proto.ErrorReturn.ReturnCodeEnum code = 1;
-  if (this->code() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_code(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.ErrorReturn)
-  return target;
-}
-
-size_t ErrorReturn::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.ErrorReturn)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .proto.ErrorReturn.ReturnCodeEnum code = 1;
-  if (this->code() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_code());
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ErrorReturn::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.ErrorReturn)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ErrorReturn* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ErrorReturn>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.ErrorReturn)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.ErrorReturn)
-    MergeFrom(*source);
-  }
-}
-
-void ErrorReturn::MergeFrom(const ErrorReturn& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.ErrorReturn)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.code() != 0) {
-    _internal_set_code(from._internal_code());
-  }
-}
-
-void ErrorReturn::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.ErrorReturn)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ErrorReturn::CopyFrom(const ErrorReturn& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.ErrorReturn)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ErrorReturn::IsInitialized() const {
-  return true;
-}
-
-void ErrorReturn::InternalSwap(ErrorReturn* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(code_, other->code_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ErrorReturn::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
 
 // ===================================================================
 
@@ -914,18 +663,11 @@ void TweetIn::InternalSwap(TweetIn* other) {
 // ===================================================================
 
 void TweetOut::InitAsDefaultInstance() {
-  ::proto::_TweetOut_default_instance_._instance.get_mutable()->error_ = const_cast< ::proto::ErrorReturn*>(
-      ::proto::ErrorReturn::internal_default_instance());
 }
 class TweetOut::_Internal {
  public:
-  static const ::proto::ErrorReturn& error(const TweetOut* msg);
 };
 
-const ::proto::ErrorReturn&
-TweetOut::_Internal::error(const TweetOut* msg) {
-  return *msg->error_;
-}
 TweetOut::TweetOut()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -935,17 +677,12 @@ TweetOut::TweetOut(const TweetOut& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._internal_has_error()) {
-    error_ = new ::proto::ErrorReturn(*from.error_);
-  } else {
-    error_ = nullptr;
-  }
+  error_ = from.error_;
   // @@protoc_insertion_point(copy_constructor:proto.TweetOut)
 }
 
 void TweetOut::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TweetOut_Tweet_2eproto.base);
-  error_ = nullptr;
+  error_ = false;
 }
 
 TweetOut::~TweetOut() {
@@ -954,7 +691,6 @@ TweetOut::~TweetOut() {
 }
 
 void TweetOut::SharedDtor() {
-  if (this != internal_default_instance()) delete error_;
 }
 
 void TweetOut::SetCachedSize(int size) const {
@@ -972,10 +708,7 @@ void TweetOut::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -986,10 +719,10 @@ const char* TweetOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.ErrorReturn error = 1;
+      // bool error = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          error_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1019,12 +752,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
+  // bool error = 1;
+  if (this->error() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::error(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1043,11 +774,9 @@ size_t TweetOut::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *error_);
+  // bool error = 1;
+  if (this->error() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1081,8 +810,8 @@ void TweetOut::MergeFrom(const TweetOut& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_error()) {
-    _internal_mutable_error()->::proto::ErrorReturn::MergeFrom(from._internal_error());
+  if (from.error() != 0) {
+    _internal_set_error(from._internal_error());
   }
 }
 
@@ -1317,18 +1046,11 @@ void FollowIn::InternalSwap(FollowIn* other) {
 // ===================================================================
 
 void FollowOut::InitAsDefaultInstance() {
-  ::proto::_FollowOut_default_instance_._instance.get_mutable()->error_ = const_cast< ::proto::ErrorReturn*>(
-      ::proto::ErrorReturn::internal_default_instance());
 }
 class FollowOut::_Internal {
  public:
-  static const ::proto::ErrorReturn& error(const FollowOut* msg);
 };
 
-const ::proto::ErrorReturn&
-FollowOut::_Internal::error(const FollowOut* msg) {
-  return *msg->error_;
-}
 FollowOut::FollowOut()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -1338,17 +1060,12 @@ FollowOut::FollowOut(const FollowOut& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._internal_has_error()) {
-    error_ = new ::proto::ErrorReturn(*from.error_);
-  } else {
-    error_ = nullptr;
-  }
+  error_ = from.error_;
   // @@protoc_insertion_point(copy_constructor:proto.FollowOut)
 }
 
 void FollowOut::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_FollowOut_Tweet_2eproto.base);
-  error_ = nullptr;
+  error_ = false;
 }
 
 FollowOut::~FollowOut() {
@@ -1357,7 +1074,6 @@ FollowOut::~FollowOut() {
 }
 
 void FollowOut::SharedDtor() {
-  if (this != internal_default_instance()) delete error_;
 }
 
 void FollowOut::SetCachedSize(int size) const {
@@ -1375,10 +1091,7 @@ void FollowOut::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -1389,10 +1102,10 @@ const char* FollowOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.ErrorReturn error = 1;
+      // bool error = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          error_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1422,12 +1135,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
+  // bool error = 1;
+  if (this->error() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::error(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1446,11 +1157,9 @@ size_t FollowOut::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *error_);
+  // bool error = 1;
+  if (this->error() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1484,8 +1193,8 @@ void FollowOut::MergeFrom(const FollowOut& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_error()) {
-    _internal_mutable_error()->::proto::ErrorReturn::MergeFrom(from._internal_error());
+  if (from.error() != 0) {
+    _internal_set_error(from._internal_error());
   }
 }
 
@@ -1720,18 +1429,11 @@ void ShowIn::InternalSwap(ShowIn* other) {
 // ===================================================================
 
 void ShowOut::InitAsDefaultInstance() {
-  ::proto::_ShowOut_default_instance_._instance.get_mutable()->error_ = const_cast< ::proto::ErrorReturn*>(
-      ::proto::ErrorReturn::internal_default_instance());
 }
 class ShowOut::_Internal {
  public:
-  static const ::proto::ErrorReturn& error(const ShowOut* msg);
 };
 
-const ::proto::ErrorReturn&
-ShowOut::_Internal::error(const ShowOut* msg) {
-  return *msg->error_;
-}
 ShowOut::ShowOut()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -1742,17 +1444,13 @@ ShowOut::ShowOut(const ShowOut& from)
       _internal_metadata_(nullptr),
       tweets_(from.tweets_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._internal_has_error()) {
-    error_ = new ::proto::ErrorReturn(*from.error_);
-  } else {
-    error_ = nullptr;
-  }
+  error_ = from.error_;
   // @@protoc_insertion_point(copy_constructor:proto.ShowOut)
 }
 
 void ShowOut::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ShowOut_Tweet_2eproto.base);
-  error_ = nullptr;
+  error_ = false;
 }
 
 ShowOut::~ShowOut() {
@@ -1761,7 +1459,6 @@ ShowOut::~ShowOut() {
 }
 
 void ShowOut::SharedDtor() {
-  if (this != internal_default_instance()) delete error_;
 }
 
 void ShowOut::SetCachedSize(int size) const {
@@ -1780,10 +1477,7 @@ void ShowOut::Clear() {
   (void) cached_has_bits;
 
   tweets_.Clear();
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -1806,10 +1500,10 @@ const char* ShowOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else goto handle_unusual;
         continue;
-      // .proto.ErrorReturn error = 2;
+      // bool error = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          error_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1847,12 +1541,10 @@ failure:
       InternalWriteMessage(1, this->_internal_tweets(i), target, stream);
   }
 
-  // .proto.ErrorReturn error = 2;
-  if (this->has_error()) {
+  // bool error = 2;
+  if (this->error() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::error(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1878,11 +1570,9 @@ size_t ShowOut::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // .proto.ErrorReturn error = 2;
-  if (this->has_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *error_);
+  // bool error = 2;
+  if (this->error() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1917,8 +1607,8 @@ void ShowOut::MergeFrom(const ShowOut& from) {
   (void) cached_has_bits;
 
   tweets_.MergeFrom(from.tweets_);
-  if (from.has_error()) {
-    _internal_mutable_error()->::proto::ErrorReturn::MergeFrom(from._internal_error());
+  if (from.error() != 0) {
+    _internal_set_error(from._internal_error());
   }
 }
 
@@ -2193,18 +1883,11 @@ void LoginIn::InternalSwap(LoginIn* other) {
 // ===================================================================
 
 void LoginOut::InitAsDefaultInstance() {
-  ::proto::_LoginOut_default_instance_._instance.get_mutable()->error_ = const_cast< ::proto::ErrorReturn*>(
-      ::proto::ErrorReturn::internal_default_instance());
 }
 class LoginOut::_Internal {
  public:
-  static const ::proto::ErrorReturn& error(const LoginOut* msg);
 };
 
-const ::proto::ErrorReturn&
-LoginOut::_Internal::error(const LoginOut* msg) {
-  return *msg->error_;
-}
 LoginOut::LoginOut()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -2214,17 +1897,12 @@ LoginOut::LoginOut(const LoginOut& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._internal_has_error()) {
-    error_ = new ::proto::ErrorReturn(*from.error_);
-  } else {
-    error_ = nullptr;
-  }
+  error_ = from.error_;
   // @@protoc_insertion_point(copy_constructor:proto.LoginOut)
 }
 
 void LoginOut::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LoginOut_Tweet_2eproto.base);
-  error_ = nullptr;
+  error_ = false;
 }
 
 LoginOut::~LoginOut() {
@@ -2233,7 +1911,6 @@ LoginOut::~LoginOut() {
 }
 
 void LoginOut::SharedDtor() {
-  if (this != internal_default_instance()) delete error_;
 }
 
 void LoginOut::SetCachedSize(int size) const {
@@ -2251,10 +1928,7 @@ void LoginOut::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -2265,10 +1939,10 @@ const char* LoginOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.ErrorReturn error = 1;
+      // bool error = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          error_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2298,12 +1972,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
+  // bool error = 1;
+  if (this->error() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::error(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2322,11 +1994,9 @@ size_t LoginOut::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *error_);
+  // bool error = 1;
+  if (this->error() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2360,8 +2030,8 @@ void LoginOut::MergeFrom(const LoginOut& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_error()) {
-    _internal_mutable_error()->::proto::ErrorReturn::MergeFrom(from._internal_error());
+  if (from.error() != 0) {
+    _internal_set_error(from._internal_error());
   }
 }
 
@@ -2551,18 +2221,11 @@ void LogoutIn::InternalSwap(LogoutIn* other) {
 // ===================================================================
 
 void LogoutOut::InitAsDefaultInstance() {
-  ::proto::_LogoutOut_default_instance_._instance.get_mutable()->error_ = const_cast< ::proto::ErrorReturn*>(
-      ::proto::ErrorReturn::internal_default_instance());
 }
 class LogoutOut::_Internal {
  public:
-  static const ::proto::ErrorReturn& error(const LogoutOut* msg);
 };
 
-const ::proto::ErrorReturn&
-LogoutOut::_Internal::error(const LogoutOut* msg) {
-  return *msg->error_;
-}
 LogoutOut::LogoutOut()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -2572,17 +2235,12 @@ LogoutOut::LogoutOut(const LogoutOut& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._internal_has_error()) {
-    error_ = new ::proto::ErrorReturn(*from.error_);
-  } else {
-    error_ = nullptr;
-  }
+  error_ = from.error_;
   // @@protoc_insertion_point(copy_constructor:proto.LogoutOut)
 }
 
 void LogoutOut::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LogoutOut_Tweet_2eproto.base);
-  error_ = nullptr;
+  error_ = false;
 }
 
 LogoutOut::~LogoutOut() {
@@ -2591,7 +2249,6 @@ LogoutOut::~LogoutOut() {
 }
 
 void LogoutOut::SharedDtor() {
-  if (this != internal_default_instance()) delete error_;
 }
 
 void LogoutOut::SetCachedSize(int size) const {
@@ -2609,10 +2266,7 @@ void LogoutOut::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -2623,10 +2277,10 @@ const char* LogoutOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.ErrorReturn error = 1;
+      // bool error = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          error_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2656,12 +2310,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
+  // bool error = 1;
+  if (this->error() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::error(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2680,11 +2332,9 @@ size_t LogoutOut::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *error_);
+  // bool error = 1;
+  if (this->error() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2718,8 +2368,8 @@ void LogoutOut::MergeFrom(const LogoutOut& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_error()) {
-    _internal_mutable_error()->::proto::ErrorReturn::MergeFrom(from._internal_error());
+  if (from.error() != 0) {
+    _internal_set_error(from._internal_error());
   }
 }
 
@@ -2993,18 +2643,11 @@ void RegisterIn::InternalSwap(RegisterIn* other) {
 // ===================================================================
 
 void RegisterOut::InitAsDefaultInstance() {
-  ::proto::_RegisterOut_default_instance_._instance.get_mutable()->error_ = const_cast< ::proto::ErrorReturn*>(
-      ::proto::ErrorReturn::internal_default_instance());
 }
 class RegisterOut::_Internal {
  public:
-  static const ::proto::ErrorReturn& error(const RegisterOut* msg);
 };
 
-const ::proto::ErrorReturn&
-RegisterOut::_Internal::error(const RegisterOut* msg) {
-  return *msg->error_;
-}
 RegisterOut::RegisterOut()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -3014,17 +2657,12 @@ RegisterOut::RegisterOut(const RegisterOut& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._internal_has_error()) {
-    error_ = new ::proto::ErrorReturn(*from.error_);
-  } else {
-    error_ = nullptr;
-  }
+  error_ = from.error_;
   // @@protoc_insertion_point(copy_constructor:proto.RegisterOut)
 }
 
 void RegisterOut::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RegisterOut_Tweet_2eproto.base);
-  error_ = nullptr;
+  error_ = false;
 }
 
 RegisterOut::~RegisterOut() {
@@ -3033,7 +2671,6 @@ RegisterOut::~RegisterOut() {
 }
 
 void RegisterOut::SharedDtor() {
-  if (this != internal_default_instance()) delete error_;
 }
 
 void RegisterOut::SetCachedSize(int size) const {
@@ -3051,10 +2688,7 @@ void RegisterOut::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && error_ != nullptr) {
-    delete error_;
-  }
-  error_ = nullptr;
+  error_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -3065,10 +2699,10 @@ const char* RegisterOut::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.ErrorReturn error = 1;
+      // bool error = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          error_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3098,12 +2732,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
+  // bool error = 1;
+  if (this->error() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::error(this), target, stream);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3122,11 +2754,9 @@ size_t RegisterOut::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.ErrorReturn error = 1;
-  if (this->has_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *error_);
+  // bool error = 1;
+  if (this->error() != 0) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3160,8 +2790,8 @@ void RegisterOut::MergeFrom(const RegisterOut& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_error()) {
-    _internal_mutable_error()->::proto::ErrorReturn::MergeFrom(from._internal_error());
+  if (from.error() != 0) {
+    _internal_set_error(from._internal_error());
   }
 }
 
@@ -3197,9 +2827,6 @@ void RegisterOut::InternalSwap(RegisterOut* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::proto::ErrorReturn* Arena::CreateMaybeMessage< ::proto::ErrorReturn >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::ErrorReturn >(arena);
-}
 template<> PROTOBUF_NOINLINE ::proto::TweetIn* Arena::CreateMaybeMessage< ::proto::TweetIn >(Arena* arena) {
   return Arena::CreateInternal< ::proto::TweetIn >(arena);
 }

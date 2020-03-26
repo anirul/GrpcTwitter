@@ -20,6 +20,7 @@ add_library(GrpcLib
     ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.pb.cc
     ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.grpc.pb.h
     ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.grpc.pb.cc
+    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet_mock.grpc.pb.h
     ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.proto
 )
 
@@ -55,10 +56,6 @@ target_link_libraries(TweetLib
 
 add_executable(TweetTest
     ${PROJECT_SOURCE_DIR}/TweetTest/main.cpp
-    ${PROJECT_SOURCE_DIR}/TweetTest/ClientTest.h
-    ${PROJECT_SOURCE_DIR}/TweetTest/ClientTest.cpp
-    ${PROJECT_SOURCE_DIR}/TweetTest/ServerTest.h
-    ${PROJECT_SOURCE_DIR}/TweetTest/ServerTest.cpp
     ${PROJECT_SOURCE_DIR}/TweetTest/StorageTest.h
     ${PROJECT_SOURCE_DIR}/TweetTest/StorageTest.cpp
 )

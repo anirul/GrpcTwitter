@@ -18,7 +18,8 @@ namespace tweet {
 	class Server final : public proto::TweetService::Service
 	{
 	public:
-		Server(const std::shared_ptr<Storage> storage);
+		Server(const std::shared_ptr<Storage> storage) :
+			storage_(storage) {}
 		grpc::Status Tweet(
 			grpc::ServerContext* context,
 			const proto::TweetIn* request,

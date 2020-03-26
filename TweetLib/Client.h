@@ -19,7 +19,10 @@ namespace tweet {
 	class Client
 	{
 	public:
-		Client(std::shared_ptr<grpc::Channel> channel);
+		Client(std::unique_ptr<proto::TweetService::Stub> stub) :
+			stub_(std::move(stub)) {}
+		Client(std::shared_ptr<grpc::Channel> channel) :
+			stub_(proto::TweetService::NewStub(channel)) {}
 		proto::TweetOut Tweet(const proto::TweetIn in);
 		proto::FollowOut Follow(const proto::FollowIn in);
 		proto::ShowOut Show(const proto::ShowIn in);

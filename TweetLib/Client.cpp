@@ -2,9 +2,6 @@
 
 namespace tweet {
 
-	Client::Client(std::shared_ptr<grpc::Channel> channel) :
-		stub_(proto::TweetService::NewStub(channel)) {}
-
 	proto::TweetOut Client::Tweet(const proto::TweetIn in)
 	{
 		grpc::ClientContext client_context;

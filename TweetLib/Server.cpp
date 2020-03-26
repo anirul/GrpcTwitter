@@ -2,25 +2,20 @@
 
 namespace tweet {
 
-	Server::Server(const std::shared_ptr<Storage> storage) : 
-		storage_(storage) {}
-
 	grpc::Status Server::Tweet(
 		grpc::ServerContext* context, 
 		const proto::TweetIn* request, 
 		proto::TweetOut* response)
 	{
 		std::string peer = context->peer();
-		proto::ErrorReturn ret{};
 		if (!storage_->Tweet(peer, request->content()))
 		{
-			ret.set_code(proto::ErrorReturn::UNKNOWN_ERROR);
+			response->set_error(true);
 		}
 		else
 		{
-			ret.set_code(proto::ErrorReturn::SUCCESSFUL);
+			response->set_error(false);
 		}
-		*response->mutable_error() = ret;
 		return grpc::Status::OK;
 	}
 
@@ -30,16 +25,14 @@ namespace tweet {
 		proto::FollowOut* response)
 	{
 		std::string peer = context->peer();
-		proto::ErrorReturn ret{};
 		if (!storage_->Follow(peer, request->name()))
 		{
-			ret.set_code(proto::ErrorReturn::UNKNOWN_ERROR);
+			response->set_error(true);
 		}
 		else
 		{
-			ret.set_code(proto::ErrorReturn::SUCCESSFUL);
+			response->set_error(false);
 		}
-		*response->mutable_error() = ret;
 		return grpc::Status::OK;
 	}
 
@@ -49,7 +42,6 @@ namespace tweet {
 		proto::ShowOut* response)
 	{
 		std::string peer = context->peer();
-		proto::ErrorReturn ret{};
 		auto values = storage_->Show(peer, request->user());
 		for (const auto& value : values)
 		{
@@ -61,13 +53,12 @@ namespace tweet {
 		}
 		if (values.empty())
 		{
-			ret.set_code(proto::ErrorReturn::UNKNOWN_ERROR);
+			response->set_error(true);
 		}
 		else
 		{
-			ret.set_code(proto::ErrorReturn::SUCCESSFUL);
+			response->set_error(false);
 		}
-		*response->mutable_error() = ret;
 		return grpc::Status::OK;
 
 	}
@@ -78,16 +69,14 @@ namespace tweet {
 		proto::LoginOut* response)
 	{
 		std::string peer = context->peer();
-		proto::ErrorReturn ret{};
 		if (!storage_->Login(peer, request->user(), request->pass()))
 		{
-			ret.set_code(proto::ErrorReturn::UNKNOWN_ERROR);
+			response->set_error(true);
 		}
 		else
 		{
-			ret.set_code(proto::ErrorReturn::SUCCESSFUL);
+			response->set_error(false);
 		}
-		*response->mutable_error() = ret;
 		return grpc::Status::OK;
 	}
 
@@ -97,16 +86,14 @@ namespace tweet {
 		proto::LogoutOut* response)
 	{
 		std::string peer = context->peer();
-		proto::ErrorReturn ret{};
 		if (!storage_->Logout(peer))
 		{
-			ret.set_code(proto::ErrorReturn::UNKNOWN_ERROR);
+			response->set_error(true);
 		}
 		else
 		{
-			ret.set_code(proto::ErrorReturn::SUCCESSFUL);
+			response->set_error(false);
 		}
-		*response->mutable_error() = ret;
 		return grpc::Status::OK;
 	}
 
@@ -116,16 +103,14 @@ namespace tweet {
 		proto::RegisterOut* response)
 	{
 		std::string peer = context->peer();
-		proto::ErrorReturn ret{};
 		if (!storage_->Register(peer, request->name(), request->pass()))
 		{
-			ret.set_code(proto::ErrorReturn::UNKNOWN_ERROR);
+			response->set_error(true);
 		}
 		else
 		{
-			ret.set_code(proto::ErrorReturn::SUCCESSFUL);
+			response->set_error(false);
 		}
-		*response->mutable_error() = ret;
 		return grpc::Status::OK;
 	}
 
