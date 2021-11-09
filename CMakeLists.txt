@@ -1,114 +1,39 @@
+# A version I use this on because of pi.
 cmake_minimum_required(VERSION 3.14)
 
+# Now we can use C++17 as a standard.
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+# Defined to cool down Microsoft gods.
 if(WIN32)
     add_compile_options("/std:c++latest")
     add_compile_options("/D _WIN32_WINNT=0x0601")
 endif(WIN32)
-set(CMAKE_CXX_STANDARD 17)
 
-project(GrpcTwitter)
+# Project name has to be smallercaps and hyphen (see vcpkg.json).
+project(grpc-twitter)
 
-enable_testing()
+# To simplify the whole vcpkg process.
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    include("~/Documents/GitHub/vcpkg/scripts/buildsystems/vcpkg.cmake")
+endif()
+if(UNIX AND NOT DEFINED VCPKG_TARGET_TRIPLET)
+    set(VCPKG_TARGET_TRIPLET x64-linux)
+endif()
+if(WIN32 AND NOT DEFINED VCPKG_TARGET_TRIPLET)
+    set(VCPKG_TARGET_TRIPLET x64-windows)
+endif()
 
+# Dependencies (should be precompiled by vcpkg.json).
 find_package(protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 find_package(Gtest CONFIG REQUIRED)
 
-add_library(GrpcLib
-  STATIC
-    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.pb.h
-    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.pb.cc
-    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.grpc.pb.h
-    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.grpc.pb.cc
-    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet_mock.grpc.pb.h
-    ${PROJECT_SOURCE_DIR}/GrpcLib/Tweet.proto
-)
-
-target_link_libraries(GrpcLib
-  PRIVATE
-    protobuf::libprotoc
-    protobuf::libprotobuf 
-    protobuf::libprotobuf-lite
-    gRPC::gpr 
-    gRPC::grpc 
-    gRPC::grpc++
-)
-
-add_library(TweetLib
-  STATIC
-    ${PROJECT_SOURCE_DIR}/TweetLib/Client.h
-    ${PROJECT_SOURCE_DIR}/TweetLib/Client.cpp
-    ${PROJECT_SOURCE_DIR}/TweetLib/Server.h
-    ${PROJECT_SOURCE_DIR}/TweetLib/Server.cpp
-    ${PROJECT_SOURCE_DIR}/TweetLib/Storage.h
-    ${PROJECT_SOURCE_DIR}/TweetLib/Storage.cpp
-)
-
-target_link_libraries(TweetLib
-  PRIVATE
-    protobuf::libprotoc
-    protobuf::libprotobuf 
-    protobuf::libprotobuf-lite
-    gRPC::gpr 
-    gRPC::grpc 
-    gRPC::grpc++
-)
-
-add_executable(TweetTest
-    ${PROJECT_SOURCE_DIR}/TweetTest/main.cpp
-    ${PROJECT_SOURCE_DIR}/TweetTest/StorageTest.h
-    ${PROJECT_SOURCE_DIR}/TweetTest/StorageTest.cpp
-)
-
-target_link_libraries(TweetTest
-  PUBLIC
-    GrpcLib
-    TweetLib
-  PRIVATE
-    GTest::gtest
-    GTest::gtest_main
-    GTest::gmock 
-    GTest::gmock_main
-    protobuf::libprotoc
-    protobuf::libprotobuf 
-    protobuf::libprotobuf-lite
-    gRPC::gpr 
-    gRPC::grpc 
-    gRPC::grpc++
-)
-
-add_executable(TweetServer
-    ${PROJECT_SOURCE_DIR}/TweetServer/main.cpp
-)
-
-target_link_libraries(TweetServer
-  PUBLIC
-    GrpcLib
-    TweetLib
-  PRIVATE
-    protobuf::libprotoc
-    protobuf::libprotobuf 
-    protobuf::libprotobuf-lite
-    gRPC::gpr 
-    gRPC::grpc 
-    gRPC::grpc++
-)
-
-add_executable(TweetClient
-    ${PROJECT_SOURCE_DIR}/TweetClient/main.cpp
-    ${PROJECT_SOURCE_DIR}/TweetClient/Command.h
-    ${PROJECT_SOURCE_DIR}/TweetClient/Command.cpp
-)
-
-target_link_libraries(TweetClient
-  PUBLIC
-    GrpcLib
-    TweetLib
-  PRIVATE
-    protobuf::libprotoc
-    protobuf::libprotobuf 
-    protobuf::libprotobuf-lite
-    gRPC::gpr 
-    gRPC::grpc 
-    gRPC::grpc++
-)
+# search for subdirectory 'CMakeLists.txt'.
+add_subdirectory(GrpcLib)
+add_subdirectory(TweetLib)
+add_subdirectory(TweetTest)
+add_subdirectory(TweetClient)
+add_subdirectory(TweetServer)
