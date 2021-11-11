@@ -36,4 +36,6 @@
 # Other
 *.DS_Store
 .vs/**
-/Build/**
+[bB]uild/**
+GrpcLib/*.h
+GrpcLib/*.cc
